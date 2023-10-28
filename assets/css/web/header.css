@@ -1,0 +1,161 @@
+.header {
+
+}
+
+.mainheader {
+
+}
+
+
+
+.header__logo {
+    width: 140px;
+}
+
+.header__logo--img {
+
+}
+
+.header__searchbar {
+    border-radius: 4px;
+    height: 40px;
+}
+
+.header__searchbar input {
+    border-radius: 4px 0 0 4px;
+    color: var(--text-color);
+    background-color: var(--gray-color);
+    border: none;
+    font-size: 16px;
+}
+
+.header__searchbar-icon {
+    border-radius: 0 4px 4px 0;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.header__searchbar-icon svg {
+    font-size: 16px;
+}
+
+.header__item {
+
+}
+
+.header__item svg {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-right: 16px;
+}
+
+.header__item-body {
+    color: var(--primary-color);
+}
+
+.header__item-body span {
+
+}
+
+.header__item-body a {
+    color: var(--primary-color);
+}
+
+.location {
+
+}
+
+.location:hover {
+    cursor: pointer;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
+.cart span {
+    position: absolute;
+    right: 6px;
+    top: -1px;
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    height: 22px;
+    width: 22px;
+}
+
+.header__menubar {
+
+}
+
+.header__menubar-icon {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+}
+
+.header__menubar-list {
+    z-index: 1;
+    background-color: var(--white-color);
+    height: 100%;
+    width: 320px;
+}
+
+.header__menubar-body {
+
+}
+
+.menubar__body-item {
+
+}
+
+.menubar__body-item:hover {
+    background-color: var(--light);
+}
+
+.menubar__item-left {
+
+}
+
+.menubar__item-left svg {
+    color: var(--yellow-color);
+    font-size: 20px;
+}
+
+.menubar__item-left span {
+    color: var(--black-color);
+    font-size: 18px;
+}
+
+.menubar__body-item > svg {
+    color: var(--black-color);
+    font-size: 20px;
+}
+
+.header__menubar-footer {
+    height: 46px;
+}
+
+.menubar__social {
+    color: var(--black-color);
+}
