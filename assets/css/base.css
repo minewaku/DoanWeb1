@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #12487F;
+    --gray-color: #f3f2f2;
+    --white-color: white;
+    --black-color: black;
+    --yellow-color: #ffcb05;
+    --price-color: #f3283d;
+    --text-color: #6c757d;
+    --light: #f8f9fa;
+}
+
+input {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
