@@ -4,7 +4,9 @@
     --white-color: white;
     --black-color: black;
     --yellow-color: #ffcb05;
+    --contact-color: #f88c06;
     --price-color: #f3283d;
+    --pay-btn-color: #ff5722;
     --text-color: #6c757d;
     --light: #f8f9fa;
 }
@@ -19,4 +21,8 @@ a {
 
 textarea:focus, input:focus {
     outline: none;
+}
+
+ul {
+    list-style: none;
 }

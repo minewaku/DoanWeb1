@@ -1,5 +1,5 @@
 .header {
-
+    background-color: var(--white-color);
 }
 
 .mainheader {
@@ -11,13 +11,23 @@
     position: relative;
 }
 
-.subheader:hover .header__menubar-popup {
+.subheader__item {
+    width: fit-content;
+}
+
+.subheader__item:hover {
+    cursor: pointer;
+}
+
+.subheader__item:hover .header__menubar-popup {
     display: block;
 }
 
 .header__menubar-popup {
     position: absolute;
+    background-color: var(--white-color);
     display: none;
+    top: 34px;
 }
 
 .subheader span {
@@ -91,11 +101,103 @@
     position: relative;
 }
 
+.cart:hover::after {
+    z-index: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: -24px;
+    height: 32px;
+    width: 120px;
+}
+
 .cart:hover {
     cursor: pointer;
 }
 
-.cart span {
+.cart:hover .cart__content {
+    display: block;
+}
+
+.cart__content {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: -36px;
+    width: 400px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0px 0px 4px #dadadada;
+    border: 1px solid #dadadada;
+}
+
+.cart__content-title {
+    display: none;
+}
+
+.cart__content-list {
+
+}
+
+.cart__content-item {
+    height: 92px;
+    border-bottom: 1px solid #dadada;
+}
+
+.content__item-img {
+    height: 62px;
+    width: 62px;
+}
+
+.content__item-img img {
+    height: 62px;
+    width: 62px;
+    object-fit: cover;
+}
+
+.content__item-details {
+    width: 100%;
+}
+
+.content__item-name {
+   
+}
+
+.content__item-name a {
+    color: var(--black-color);
+}
+
+.content__item-quantity {
+
+}
+
+.cart__content-total {
+
+}
+
+.cart__content-delete {
+
+}
+
+.content__item-delete--btn {
+    
+}
+
+.content__item-delete--btn svg {
+    font-size: 16px;
+    margin: 0px;
+    color: var(--black-color);
+}
+
+.pay--btn {
+    background-color: var(--pay-btn-color);
+    color: var(--white-color);
+    border-radius: 4px;
+}
+
+.cart .cart__quantity {
     position: absolute;
     right: 6px;
     top: -1px;
@@ -104,6 +206,7 @@
     background-color: var(--yellow-color);
     height: 22px;
     width: 22px;
+    color: var(--black-color);
 }
 
 .header__menubar {
