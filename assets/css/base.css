@@ -5,10 +5,105 @@
     --black-color: black;
     --yellow-color: #ffcb05;
     --contact-color: #f88c06;
-    --price-color: #f3283d;
+    /* --price-color: #f3283d; */
+    --price-color: #a1001a;
     --pay-btn-color: #ff5722;
     --text-color: #6c757d;
+    --text-secondary-color: #666666;
     --light: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* custom column */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+    .col-sm-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    .col-sm-4-8 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    [class*="col-sm"] {
+        display: block;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .col-md-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    .col-md-4-8 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    [class*="col-md"] {
+        display: block;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .col-lg-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    .col-lg-4-8 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    [class*="col-lg"] {
+        display: block;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .col-xl-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+
+    .col-xl-4-8 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    [class*="col-xl"] {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .col-xxl-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+    .col-xxl-4-8 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    [class*="col-xxl"] {
+        display: block;
+    }
 }
 
 input {
