@@ -1,0 +1,156 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.banner {
+
+}
+
+.banner__top {
+
+}
+
+.banner__top img {
+
+}
+
+.banner__bottom {
+
+}
+
+.banner__bottom-item {
+
+}
+
+.banner__bottom-item a {
+
+}
+
+.banner__bottom-item a img {
+    width: 100%;
+}
+
+.body__product {
+    background-color: var(--white-color);
+}
+
+.body__product-title {
+    border-bottom: 1px solid #dadada;
+}
+
+.body__product-title a {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.body__product-title a:hover {
+    color: var(--primary-color);
+}
+
+.body__product-list {
+
+}
+
+.body__product-list::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .body__product-list {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+.body__product-list--wrap {
+
+}
+
+.product__list-item {
+ 
+}
+
+.product__list-item .wrapper:hover {
+    box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02);
+}
+
+.product__img {
+
+}
+
+.product__img a img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product__details {
+
+}
+
+.product__details-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.produt__price {
+    overflow: auto;
+    width: 100%;
+}
+
+.product__price-current {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--price-color);
+}
+
+.product__price-old {
+    font-size: 14px;
+    color: var(--text-secondary-color);
+    text-decoration: line-through;
+}
+
+.product__price-off {
+    border-radius: 16px;
+    background-color: var(--yellow-color);
+    color: var(--price-color);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.product__badge {
+    
+}
+
+.product__badge img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.body__product-more {
+
+}
+
+.product__more--btn {
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    width: fit-content;
+}
+
+.product__more--btn a {
+    color: var(--primary-color);
+}
+
+.section__banner {
+
+}
+
+.section__banner a {
+
+}
+
+.section__banner a img {
+    width: 100%;
+}

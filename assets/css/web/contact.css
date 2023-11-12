@@ -1,0 +1,71 @@
+.contact--fixed {
+    z-index: 1;
+    position: fixed;
+    bottom: 4px;
+    right: 12px;
+}
+
+.contact--fixed:hover {
+    cursor: pointer;
+}
+
+.contact__button {
+    height: 62px;
+    width: 62px;
+    background-color: var(--contact-color);
+    border-radius: 50%;
+}
+
+.contact__button svg {
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+.contact__button span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+
+.contact__list {
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: 0.3s all ease-in;
+    transform-origin: center right;
+}
+
+.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.contact__list-item {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+}
+
+.contact__list-item a {
+
+}
+
+.contact__list-item a svg {
+    color: var(--white-color);
+    font-size: 18px;
+}
+
+.message {
+    background-color: #1570cd;
+}
+
+.phone {
+    background-color: #16cd60;
+}
+
+.email {
+    background-color: #c4275f;
+}
