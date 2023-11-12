@@ -15,12 +15,13 @@
     />
 
     <!-- Css -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/base.css" />
     <link rel="stylesheet" href="/assets/css/web/mainpage.css" />
     <link rel="stylesheet" href="/assets/css/web/header.css" />
+    <link rel="stylesheet" href="../../assets/css/web/more-product.css" />
+    <link rel="stylesheet" href="../../assets/responsive/more-product.css" />
     <link rel="stylesheet" href="/assets/css/web/footer.css" />
-
-    <!-- Js -->
 
     <title>Document</title>
   </head>
@@ -268,7 +269,137 @@
 
       <!-- start body -->
       <div class="body">
-        <div class="container"></div>
+        <div class="wrap">
+          <div class="container-product">
+            <!-- Fillter -->
+            <div class="fillter">
+              <div class="fillter__line"></div>
+              <div class="fillter__heading">MỨC GIÁ</div>
+              <ul class="fillter__list">
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-1"
+                  />
+                  <label for="fillter__item-1">Giá dưới 99.000đ</label>
+                </li>
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-2"
+                  />
+                  <label for="fillter__item-2">99.000đ - 201.000đ</label>
+                </li>
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-3"
+                  />
+                  <label for="fillter__item-3">201.000đ - 301.000đ</label>
+                </li>
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-4"
+                  />
+                  <label for="fillter__item-4">301.000đ - 501.000đ</label>
+                </li>
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-5"
+                  />
+                  <label for="fillter__item-5">501.000đ - 1.000.000đ</label>
+                </li>
+                <li class="fillter__item">
+                  <input
+                    type="checkbox"
+                    name=""
+                    class="checkbox"
+                    id="fillter__item-6"
+                  />
+                  <label for="fillter__item-6">Giá trên 1.000.000đ</label>
+                </li>
+              </ul>
+            </div>
+            <div class="product-show">
+              <h3 class="name-heading">Trái Cây Việt</h3>
+              <div class="fillter-desc">
+                <!-- Item 1 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">Giá dưới 99.000đ</p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">99.000đ - 201.000đ</p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">201.000đ - 301.000đ</p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">301.000đ - 501.000đ</p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">
+                    501.000đ - 1.000.000đ
+                  </p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="selected-fillter-item hidden">
+                  <p class="selected-fillter-item__desc">Giá trên 1.000.000đ</p>
+                  <div class="selected-fillter-item__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="product-container">
+                <!-- product-item -->
+                <div class="product-item">
+                  <div class="box-img">
+                    <img
+                      src="../../assets/img/product/xoai.jpg"
+                      alt="Xoài giống Úc - 800G/Trái"
+                      class="product-img"
+                    />
+                  </div>
+                  <p class="product-name">Xoài giống Úc - 800G/Trái</p>
+                  <p class="product-price">59,200₫</p>
+                </div>
+              </div>
+              <div class="pagination-row">
+                <ul class="page-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- end body -->
 
@@ -403,8 +534,6 @@
 
     <!-- Fontawsome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-
-    <!-- Js -->
     <script src="../../assets/JS/board.js"></script>
   </body>
 </html>
