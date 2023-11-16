@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #12487f;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Common */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Body */
+.wrap {
+  background-color: #f4f4f4;
+  padding: 16px 0;
+}
+
+.container-product {
+  background-color: #fff;
+  margin-top: 20px;
+  width: 1300px;
+  max-width: calc(100% - 30px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 325px 1fr;
+}
+
+.fillter {
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+.fillter__line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 22px auto 18px auto;
+  opacity: 0.8;
+}
+
+.fillter__heading {
+  color: black;
+  padding-bottom: 16px;
+}
+
+.fillter .fillter__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.fillter__item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 14px;
+}
+
+.fillter__item input {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--primary-color);
+}
+
+.fillter__item input:checked + label::before {
+  background-color: var(--primary-color);
+}
+
+.fillter__item input:checked + label::after {
+  display: inline-flex;
+}
+
+.fillter__item label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fillter__item label::before {
+  content: "";
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.fillter__item label::after {
+  content: "";
+  display: none;
+  width: 6px;
+  height: 10px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  rotate: 45deg;
+  position: absolute;
+  left: 7px;
+  top: 3px;
+}
+
+.selected-fillter-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 4px 10px 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  background-color: #f4f4f4;
+  height: 24px;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.selected-fillter-item__desc,
+.selected-fillter-item__icon {
+  font-size: 12px;
+  color: #e85933;
+}
+
+.selected-fillter-item__icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px 0 10px;
+  font-weight: 700;
+  padding: 0 4px 1px 4px;
+}
+
+/* Product */
+.product-show {
+  padding: 10px;
+}
+
+.name-heading {
+  font-size: 23px;
+  padding: 10px 0;
+}
+
+.product-container {
+  display: flex;
+  gap: calc((955px - (224px * 4)) / 3);
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.product-item {
+  width: 224px;
+  padding: 20px 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-item:hover {
+  box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1),
+    1px 1px 5px rgba(0, 0, 0, 0.02);
+}
+
+.product-item:hover .product-img {
+  transform: scale(1.05);
+}
+.product-item .box-img {
+  height: 223px;
+  width: 223px;
+  overflow: hidden hidden;
+}
+
+.product-item .product-img {
+  width: 223px;
+  height: 223px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #12487f;
+  padding-top: 20px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #a1001a;
+  padding-top: 16px;
+  margin-bottom: 0;
+}
+
+.pagination-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-row .page-list {
+  display: flex;
+  list-style: none;
+  padding: 10px 0 20px 0;
+}
+
+.pagination-row .page-list .page-item {
+  width: 36px;
+  height: 36px;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  border-color: #88a5c8;
+  background-color: #fff;
+  margin: 3px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.pagination-row .page-list .page-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination-row .page-list .page-item.active {
+  border-color: #12487f;
+  color: #fff;
+  background-color: #12487f;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
