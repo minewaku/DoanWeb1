@@ -1,96 +1,12 @@
+import fruitList from "./fruitList.js";
+
 const productFruit = document.querySelector(".product-container");
 const checkboxes = document.querySelectorAll(".checkbox");
 const seclectedFillter = document.querySelectorAll(".selected-fillter-item");
 const closeFillters = document.querySelectorAll(".selected-fillter-item__icon");
 const pagination = document.querySelector(".page-list");
 let currentPage = 1;
-
-const fruitList = [
-  {
-    name: "Thanh long ruột đỏ",
-    srcImg: "../../assets/img/product/thanhLongRuotDo.webp",
-    price: 57000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Táo Ambrosia New Zealand size 100 - 120",
-    srcImg: "../../assets/img/product/tao_ambrosia_new_zealand.jpg",
-    price: 119000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Sầu riêng cơm Ri6",
-    srcImg: "../../assets/img/product/sau-rieng-com-ri6.jpg",
-    price: 119000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Táo Rockit New Zealand (Ống 4 trái)",
-    srcImg: "../../assets/img/product/tao_rockit_new_zealand.webp",
-    price: 119000,
-    isSlide: true,
-    desc: [],
-  },
-  {
-    name: "Dưa hấu đỏ không hạt",
-    srcImg: "../../assets/img/product/dua_hau_khong_hat.png",
-    price: 156000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Cam sành",
-    srcImg: "../../assets/img/product/cam_sanh.jpg",
-    price: 25000,
-    isSlide: true,
-    desc: [],
-  },
-  {
-    name: "Nho mẫu đơn Premium Hàn Quốc (600 - 700G/Hộp)",
-    srcImg: "../../assets/img/product/nho_mau_don_premium_han_quoc.webp",
-    price: 349000,
-    isSlide: true,
-    desc: [],
-  },
-  {
-    name: "Dưa lưới giống Nhật Ichiba Nông Phát farm",
-    srcImg: "../../assets/img/product/dua_luoi_nhat.jpg",
-    price: 280000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Chuối Laba King (0,9 - 1,1Kg/Nhánh)",
-    srcImg: "../../assets/img/product/chuoi_laba_king.jpg",
-    price: 75900,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Dứa MD2 Gia Lai (1.2Kg - 1.4Kg/Trái)m",
-    srcImg: "../../assets/img/product/trai_khom.jpg",
-    price: 79000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Chôm Chôm giống Thái Lan",
-    srcImg: "../../assets/img/product/chom_chom.jpg",
-    price: 119000,
-    isSlide: false,
-    desc: [],
-  },
-  {
-    name: "Việt Quất Peru",
-    srcImg: "../../assets/img/product/viet_quat_peru.webp",
-    price: 89000,
-    isSlide: true,
-    desc: [],
-  },
-];
+let perPage;
 
 render(fruitList, productFruit);
 
@@ -114,24 +30,30 @@ checkboxes.forEach((checkbox, index) => {
       case 0: {
         if (isChecked) {
           renderFill(fruitList, 0, 99000, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
       case 1: {
         if (isChecked) {
           renderFill(fruitList, 99000, 201000, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
       case 2: {
         if (isChecked) {
           renderFill(fruitList, 201000, 301000, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
@@ -139,8 +61,10 @@ checkboxes.forEach((checkbox, index) => {
       case 3: {
         if (isChecked) {
           renderFill(fruitList, 301000, 501000, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
@@ -148,16 +72,20 @@ checkboxes.forEach((checkbox, index) => {
       case 4: {
         if (isChecked) {
           renderFill(fruitList, 501000, 1000000, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
       case 5: {
         if (isChecked) {
           renderFill(fruitList, 1000000, Infinity, productFruit);
+          goToDetail();
         } else {
           render(fruitList, productFruit);
+          goToDetail();
         }
         break;
       }
@@ -176,9 +104,10 @@ closeFillters.forEach((closeFillter, index) => {
 // Render
 function render(list, elementContainer) {
   elementContainer.innerHTML = "";
-  list.forEach((item) => {
+  list.forEach((item, index) => {
     let elementLink = document.createElement("a");
-    elementLink.setAttribute("href", "#!");
+    elementLink.setAttribute("href", "#");
+    elementLink.setAttribute("data-value", item.id);
     let fruitElement = document.createElement("div");
     fruitElement.classList.add("product-item");
     let boxImg = document.createElement("div");
@@ -220,8 +149,8 @@ function renderFill(list, min, max, containerElement) {
 // Pagination
 function pagiNation(list) {
   let currentPage = 1;
-  let limit = 9;
-  let perPage = [];
+  let limit = 12;
+  perPage = [];
   perPage = list.slice(
     (currentPage - 1) * limit,
     (currentPage - 1) * limit + limit
@@ -235,13 +164,14 @@ pagiNation(fruitList);
 
 function handlePagenumber(number) {
   let products = fruitList;
-  let limit = 9;
+  let limit = 12;
   currentPage = number;
   perPage = products.slice(
     (currentPage - 1) * limit,
     (currentPage - 1) * limit + limit
   );
   render(perPage, productFruit);
+  goToDetail();
 
   // Xóa lớp "active" từ tất cả các li
   const pageNumberItems = document.querySelectorAll(
@@ -258,7 +188,7 @@ function handlePagenumber(number) {
 
 // render so luong trang
 function renderPageNumber(list) {
-  let limit = 9;
+  let limit = 12;
   let totalPages = Math.ceil(list.length / limit);
   let pageNumber = document.querySelector(".pagination-row .page-list");
 
@@ -269,9 +199,28 @@ function renderPageNumber(list) {
     if (i == currentPage) {
       newPage.classList.add("active");
     }
-    newPage.setAttribute("onclick", "handlePagenumber(" + i + ")");
+    newPage.addEventListener("click", function () {
+      handlePagenumber(i);
+    });
     pageNumber.appendChild(newPage);
   }
 }
+
+function redirectToProductDetail(productId) {
+  var redirectPath = "./productDetail.html?id=" + productId;
+  window.location.href = redirectPath;
+}
+
+function goToDetail() {
+  var allProducts = document.querySelectorAll(".product-container a");
+  allProducts.forEach((product) => {
+    product.addEventListener("click", () => {
+      var productId = product.getAttribute("data-value");
+      console.log(productId);
+      redirectToProductDetail(productId);
+    });
+  });
+}
+goToDetail();
 
 renderPageNumber(fruitList);
