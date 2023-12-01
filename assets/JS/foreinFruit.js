@@ -1,4 +1,4 @@
-const foreinFruit = [
+export const foreinFruit = [
   {
     id: 1,
     name: "Táo Jazz New Zealand size 90",
@@ -509,5 +509,3 @@ const foreinFruit = [
     },
   },
 ];
-
-export default foreinFruit;

@@ -211,7 +211,7 @@ const fruitList = [
     id: 12,
     name: "Việt Quất Peru",
     srcImg: "../../assets/img/product/viet_quat_peru.webp",
-    srcImg2: "../../assets/img/product/viet_quat_peru_2.webp",
+    srcImg2: "../../assets/img/product/viet_quoc_new_zealand_2.webp",
     price: 89000,
     isSlide: true,
     desc: {

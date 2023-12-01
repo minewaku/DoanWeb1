@@ -1,4 +1,4 @@
-import fruitList from "./fruitList.js";
+import { foreinFruit as fruitList } from "./foreinFruit.js";
 
 const btnKgAct = document.querySelector(".position-relative.active");
 const mainProduct = document.querySelector(".product");
@@ -358,7 +358,7 @@ function renderDesc(productId) {
             <p><strong>Xuất xứ: </strong>${productSelected.desc.xuatXu}</p>
             <p><strong>Chất lượng: </strong>Nhập khẩu</p>
             <br />
-            <p><strong>Đặc điểm nổi bật</strong></p>
+            <p><strong>Đặc điểm nổi bật:</strong></p>
             <ul>
             ${(function (arrDesc) {
               var desc = "";

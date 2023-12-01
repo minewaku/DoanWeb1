@@ -1,4 +1,4 @@
-import fruitList from "./fruitList.js";
+import { hotDealFruits as fruitList } from "./hotDealFruit.js";
 
 const productFruit = document.querySelector(".product-container");
 const checkboxes = document.querySelectorAll(".checkbox");
@@ -207,7 +207,7 @@ function renderPageNumber(list) {
 }
 
 function redirectToProductDetail(productId) {
-  var redirectPath = "./productDetailFruitList.html?id=" + productId;
+  var redirectPath = "./productDetailHotDeal.html?id=" + productId;
   window.location.href = redirectPath;
 }
 

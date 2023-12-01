@@ -1,4 +1,5 @@
-import fruitList from "./fruitList.js";
+import { foreinFruit as fruitList } from "./foreinFruit.js";
+console.log(fruitList);
 
 const productFruit = document.querySelector(".product-container");
 const checkboxes = document.querySelectorAll(".checkbox");
@@ -207,7 +208,7 @@ function renderPageNumber(list) {
 }
 
 function redirectToProductDetail(productId) {
-  var redirectPath = "./productDetailFruitList.html?id=" + productId;
+  var redirectPath = "./productDetailForeignList.html?id=" + productId;
   window.location.href = redirectPath;
 }
 
