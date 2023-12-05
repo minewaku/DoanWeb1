@@ -385,7 +385,7 @@ function goToDetail() {
   allProducts.forEach((product) => {
     product.addEventListener("click", () => {
       var productId = product.getAttribute("data-value");
-      var redirectPath = "./productDetail.html?id=" + productId;
+      var redirectPath = "./productDetailHotDeal.html?id=" + productId;
       window.location.href = redirectPath;
     });
   });

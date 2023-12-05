@@ -1585,17 +1585,21 @@
       import fruitList from "./assets/JS/fruitList.js";
       import foreinFruit from "./assets/JS/foreinFruit.js";
       import hotDealFruits from "./assets/JS/hotDealFruit.js";
-      console.log(hotDealFruits);
+
       // Render FruitList
       let newFruitList = fruitList.slice(0, 8);
 
       let containerFruitList = document.querySelector(".listFruitList");
-      let htmlsFruitList = newFruitList.map((product) => {
+      let htmlsFruitList = newFruitList.map((product, index) => {
         return `
-        <li class="product__list-item col-md-2-4 col-4 mb-3">
+        <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
+          index + 20
+        }>
                 <div class="wrapper">
                   <div class="product__img">
-                    <a href="">
+                    <a href="./views/web/productDetailFruitList.html?id=${
+                      parseInt(index) + 1
+                    }">
                       <img
                         src="${product.srcImg}"
                         alt="${product.name}"
@@ -1604,7 +1608,7 @@
                   </div>
 
                   <div class="product__details px-2 mt-3">
-                    <span>${product.name}</span>
+                    <span class="line-clamp">${product.name}</span>
                     <div class="product__price d-flex align-items-center">
                       <div class="product__price-current me-1">
                         ${(function (product) {
@@ -1645,18 +1649,19 @@
                 </div>
               </li>
       ` + htmlsFruitList.join(" ");
-      console.log(containerFruitList);
 
       // Render HotDealList
       let newHotDealList = hotDealFruits.slice(0, 10);
 
       let containerHotDealList = document.querySelector(".listHotDealList");
-      let htmlsHotDealList = newHotDealList.map((product) => {
+      let htmlsHotDealList = newHotDealList.map((product, index) => {
         return `
-        <li class="product__list-item col-md-2-4 col-4 mb-3">
+        <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${index}>
                 <div class="wrapper">
                   <div class="product__img">
-                    <a href="">
+                    <a href="./views/web/productDetailHotDeal.html?id=${
+                      parseInt(index) + 1
+                    }">
                       <img
                         src="${product.srcImg}"
                         alt="${product.name}"
@@ -1665,7 +1670,7 @@
                   </div>
 
                   <div class="product__details px-2 mt-3">
-                    <span>${product.name}</span>
+                    <span class="line-clamp">${product.name}</span>
                     <div class="product__price d-flex align-items-center">
                       <div class="product__price-current me-1">
                         ${(function (product) {
@@ -1695,7 +1700,6 @@
         `;
       });
       containerHotDealList.innerHTML = htmlsHotDealList.join(" ");
-      console.log(containerFruitList);
 
       //
 
@@ -1703,12 +1707,16 @@
       let newForeignList = foreinFruit.slice(0, 8);
 
       let containerForeignList = document.querySelector(".listForeignList");
-      let htmlsForeignList = newForeignList.map((product) => {
+      let htmlsForeignList = newForeignList.map((product, index) => {
         return `
-  <li class="product__list-item col-md-2-4 col-4 mb-3">
+  <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
+    index + 10
+  }>
           <div class="wrapper">
             <div class="product__img">
-              <a href="">
+              <a href="./views/web/productDetailForeignList.html?id=${
+                parseInt(index) + 1
+              }">
                 <img
                   src="${product.srcImg}"
                   alt="${product.name}"
@@ -1717,7 +1725,7 @@
             </div>
 
             <div class="product__details px-2 mt-3">
-              <span>${product.name}</span>
+              <span class="line-clamp">${product.name}</span>
               <div class="product__price d-flex align-items-center">
                 <div class="product__price-current me-1">
                   ${(function (product) {
@@ -1759,8 +1767,29 @@
           </div>
         </li>
 ` + htmlsForeignList.join(" ");
-      console.log(containerFruitList);
 
+      // Change Page
+      var allProducts = document.querySelectorAll(".product__list-position");
+      allProducts.forEach((product) => {
+        product.addEventListener("click", () => {
+          let idProduct = product.dataset.position;
+          if (idProduct < 10) {
+            window.location.href =
+              "./views/web/productDetailHotDeal.html?id=" +
+              (parseInt(idProduct) + 1);
+          } else if (idProduct >= 10 && idProduct <= 20) {
+            window.location.href =
+              "./views/web/productDetailForeignList.html?id=" +
+              (parseInt(idProduct) + 1 - 10);
+          } else {
+            window.location.href =
+              "./views/web/productDetailFruitList.html?id=" +
+              (parseInt(idProduct) + 1 - 20);
+          }
+        });
+      });
+
+      // Get Cart
       let productsInCart = localStorage.getItem("products")
         ? JSON.parse(localStorage.getItem("products"))
         : [];
