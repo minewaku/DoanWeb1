@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  background-color: #fff;
+}
+
+#select {
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+#select .box {
+  background-color: #fff;
+}
+
+#select .menu {
+  background-color: #eee;
+  list-style: none;
+  padding: 12px 0;
+}
+
+#select .menu li {
+  display: inline-block;
+}
+#select .space {
+  height: 16px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+#form {
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form .form-title {
+  padding-top: 5px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+  margin: 0 74px;
+}
+
+#form .form-title .form-warning {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#form .form-title .form-instruct {
+  margin-top: 10px;
+}
+
+#form .form-instruct a {
+  color: #007bff;
+}
+
+#form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  row-gap: 20px;
+}
+
+#form-register .title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+#form-register form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+#form-register .input-firstname label,
+#form-register .input-lastname label,
+#form-register .input-email label,
+#form-register .input-phone label,
+#form-register .input-password label,
+#form-register .input-confirm label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+label span {
+  color: red;
+}
+
+#form-register .input-firstname #firstname,
+#form-register .input-lastname #lastname,
+#form-register .input-email #email,
+#form-register .input-phone #phone,
+#form-register .input-password #password,
+#form-register .input-confirm #confirm {
+  width: 550px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #e1e1e1;
+  margin: 5px 0;
+}
+
+#form-register .input-firstname .firstname-error,
+#form-register .input-lastname .lastname-error,
+#form-register .input-email .email-error,
+#form-register .input-phone .phone-error,
+#form-register .input-password .password-error,
+#form-register .input-confirm .confirm-error {
+  font-size: 12px;
+  font-weight: 400;
+  color: #12487f;
+}
+
+#form-register .submit {
+  width: 550px;
+}
+
+#form-register .submit .btn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.5;
+  background-color: #12487f;
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 10px;
+}
+
+#form-register .submit .btn:hover {
+  opacity: 0.8;
+}
+
+#form-register .submit .btn:active {
+  opacity: 0.5;
+}

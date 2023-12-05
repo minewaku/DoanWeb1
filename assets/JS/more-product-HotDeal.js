@@ -1,5 +1,5 @@
-import { hotDealFruits as fruitList } from "./hotDealFruit.js";
-
+import hotDealFruits from "./hotDealFruit.js";
+var fruitList = hotDealFruits;
 const productFruit = document.querySelector(".product-container");
 const checkboxes = document.querySelectorAll(".checkbox");
 const seclectedFillter = document.querySelectorAll(".selected-fillter-item");

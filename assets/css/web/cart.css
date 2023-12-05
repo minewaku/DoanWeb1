@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+span {
+  display: inline-block;
+}
+
+.body .container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.body .breadcrumb {
+  height: 50px;
+  width: 100%;
+  background-color: #eee;
+}
+
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb--desc {
+  display: flex;
+  transform: translateY(15%);
+}
+
+.breadcrumb--desc p:nth-child(2) {
+  opacity: 0.6;
+}
+
+/* Cart */
+
+.body .cart {
+  background-color: white;
+  border-radius: 10px;
+  max-height: 2000px;
+  cursor: auto;
+  padding: 10px;
+}
+
+.cart--line {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+.cart--body {
+  display: grid;
+  grid-template-columns: 68% 1fr;
+  column-gap: 15px;
+  margin-top: 10px;
+}
+
+.cart--body__products {
+  height: 700px;
+  max-height: 2000px;
+}
+
+.product--item {
+  display: flex;
+  height: 70px;
+  width: 866px;
+  padding: 0 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product--item:not(.product--item:first-child) {
+  border-top: 1px solid #eee;
+}
+
+.product--item__btnDel {
+  opacity: 0.6;
+  padding: 10px;
+  width: 58px;
+  height: 60px;
+}
+
+.product--item__img img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.product--item__info {
+  width: 480px;
+}
+
+.product--item__info .info--name,
+.product--item__info .info--quantity {
+  font-size: 14px;
+  opacity: 0.9;
+  padding: 10px 0;
+}
+
+.product--item__info .info--quantity {
+  padding: 0;
+}
+
+.product--item__total {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 89px;
+  text-align: right;
+}
+
+.product--item__UpDown {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  border-radius: 10px;
+  width: 120px;
+  border: 2px solid #eee;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.product--item__UpDown .down,
+.product--item__UpDown .up,
+.product--item__UpDown .quantity {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product--item__UpDown .down {
+  border-right: 2px solid #eee;
+  width: 26px;
+  height: 26px;
+}
+
+.product--item__UpDown .up {
+  border-left: 2px solid #eee;
+  width: 26px;
+  height: 26px;
+}
+
+/* right */
+.cart--body__infoCus {
+  padding: 0 20px 0 10px;
+  border-left: 8px solid #eee;
+}
+
+.infoCus--heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 64%;
+  padding-bottom: 5px;
+  color: rgb(255, 87, 34);
+  border-bottom: 2px solid rgb(255, 87, 34);
+}
+
+input[type="date"] {
+  display: block;
+}
+.date-receive-package {
+  display: block;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #eee;
+  padding: 5px 20px;
+}
+
+.date-receive label {
+  font-size: 14px;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+
+select {
+  display: block;
+  background-color: #eee;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+select option:checked {
+  border: 1px solid black;
+}
+
+.infoCus--total {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.infoCus--total__heading {
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.infoCus--total__price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.infoCus--submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: rgb(255, 87, 34);
+}
+
+.infoCus--submit-btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.infoCus--submit-btn p {
+  transform: translateY(20%);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.go-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.go-home a {
+  margin-left: 10px;
+  color: #333;
+}
+
+.go-home:hover .fa-arrow-left {
+  animation: goHome 2s ease-in-out;
+}
+
+@keyframes goHome {
+  from 0% {
+    transform: translateX(0);
+  }
+  to 100% {
+    transform: translateX(-10px);
+  }
+}
+
+.infoCus--notice textarea {
+  padding: 10px;
+}
+
+.infoCus--phone-number label {
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#cus-phone {
+  display: block;
+  border: 1px solid #999;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}

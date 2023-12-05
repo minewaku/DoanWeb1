@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/lib/bootstrap-5.3.2-dist/css/bootstrap.css" />
+
+    <!-- Fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Css -->
+    <!-- <link rel="stylesheet" href="/assets/css/reset.css"/> -->
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/web/mainpage.css" />
+    <link rel="stylesheet" href="/assets/css/web/header.css" />
+    <link rel="stylesheet" href="/assets/css/web/footer.css" />
+    <link rel="stylesheet" href="/assets/css/web/contact.css" />
+    <link rel="stylesheet" href="../../assets/css/web/cart.css" />
+
+    <!-- Js -->
+
+    <title>Giỏ hàng cửa bạn</title>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- start header -->
+      <div class="header">
+        <div class="container">
+          <div class="mainheader">
+            <div class="row mb-3">
+              <div class="col-2 d-xl-flex d-none align-items-center">
+                <a href="/" class="header__logo">
+                  <img
+                    class="header__logo--img img-fluid"
+                    src="/assets/img/logo.webp"
+                    class="Logo"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <div class="col-3 d-xl-flex d-none align-items-center">
+                <form method="get" class="header__searchbar w-100 d-flex">
+                  <input
+                    type="text"
+                    class="ps-2 w-100"
+                    placeholder="Tìm kiếm sản phẩm"
+                  />
+                  <span
+                    class="header__searchbar-icon d-flex justify-content-center align-items-center"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </form>
+              </div>
+
+              <div class="col-7 d-xl-flex d-none">
+                <ul class="d-flex align-items-center p-0 m-0">
+                  <li class="header__item d-flex align-items-center me-4">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="header__item-body d-flex flex-column">
+                      <span>Tư vấn và hỗ trợ</span>
+                      <a class="fw-bold" href="tel:84 28 3835 4409"
+                        >028 3835 4409</a
+                      >
+                    </div>
+                  </li>
+
+                  <li
+                    class="header__item d-none d-md-flex d-none align-items-center me-4"
+                  >
+                    <i class="fa-solid fa-circle-user"></i>
+                    <div class="header__item-body d-flex flex-column">
+                      <a href="./login.html">Đăng nhập</a>
+                      <a href="./register.html">Đăng ký</a>
+                    </div>
+                  </li>
+
+                  <li class="header__item d-flex align-items-center me-4">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="header__item-body d-flex flex-column">
+                      <span>Chi nhánh giao hàng</span>
+                      <span class="location fw-bold">Quận ABC</span>
+                    </div>
+                  </li>
+
+                  <li class="header__item cart d-flex align-items-center">
+                    <a href="">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <span
+                        class="cart__quantity d-flex justify-content-center align-items-center"
+                        >4</span
+                      >
+                    </a>
+
+                    <div class="cart__content p-3">
+                      <div class="cart__content-title">
+                        Không có sàn phẩm nào
+                      </div>
+                      <ul class="cart__content-list p-0">
+                        <li class="cart__content-item d-flex px-3">
+                          <div class="content__item-img me-3">
+                            <img
+                              src="/assets/img/products/chuoi-trai-01.jpg.webp"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="content__item-details">
+                            <div class="content__item-name">
+                              <a href=""> Chuối chín cả nải</a>
+                            </div>
+
+                            <div class="">
+                              <span class="content__item-price">12000</span>
+                              <span class="content__item-quantity">x12</span>
+                            </div>
+                          </div>
+
+                          <div class="content__item-delete">
+                            <div class="content__item-delete--btn text-end">
+                              <i class="fa-solid fa-xmark"></i>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div
+                        class="cart__content-total py-2 d-flex align-items-center"
+                      >
+                        Tổng tiền tạm tính: <b class="ms-2">12000 &#8363;</b>
+                      </div>
+                      <div class="cart__content-button">
+                        <a href="./cart.html">
+                          <div class="pay--btn py-2 text-center">
+                            Tiến hành thanh toán
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- alternative header for responsive -->
+              <div
+                class="col-12 d-xl-none d-flex align-items-center justify-content-between my-3"
+              >
+                <div class="header__menubar">
+                  <div class="header__menubar-icon d-md-none" id="menubar-icon">
+                    <i class="fa-solid fa-bars"></i>
+                  </div>
+                </div>
+
+                <a href="" class="header__logo">
+                  <img
+                    class="header__logo--img img-fluid"
+                    src="/assets/img/logo.webp"
+                    class="Logo"
+                    alt=""
+                  />
+                </a>
+
+                <div class="header__item cart d-flex align-items-center">
+                  <a href="" class="d-md-none">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span
+                      class="cart__quantity d-flex justify-content-center align-items-center"
+                      >4</span
+                    >
+                  </a>
+                </div>
+              </div>
+
+              <!-- alternative header for responsive -->
+              <div
+                class="col-12 d-none align-items-center justify-content-center my-3"
+              >
+                <a href="" class="header__logo">
+                  <img
+                    class="header__logo--img img-fluid"
+                    src="/assets/img/logo.webp"
+                    class="Logo"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- alternative header for responsive -->
+              <div
+                class="col-12 d-xl-none d-flex flex-row justify-content-around align-items-center mb-3"
+              >
+                <div class="header__item d-flex align-items-center me-4">
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="header__item-body d-flex flex-column">
+                    <span>Tư vấn và hỗ trợ</span>
+                    <a class="fw-bold" href="tel:84 28 3835 4409"
+                      >028 3835 4409</a
+                    >
+                  </div>
+                </div>
+
+                <div class="header__item d-flex align-items-center me-4">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="header__item-body d-flex flex-column">
+                    <span>Chi nhánh giao hàng</span>
+                    <span class="location fw-bold">Quận ABC</span>
+                  </div>
+                </div>
+
+                <div
+                  class="header__item d-none d-md-flex d-none align-items-center me-4"
+                >
+                  <i class="fa-solid fa-circle-user"></i>
+                  <div class="header__item-body d-flex flex-column">
+                    <a href="">Đăng nhập</a>
+                    <a href="">Đăng ký</a>
+                  </div>
+                </div>
+
+                <div
+                  class="header__item cart d-none d-md-flex align-items-center"
+                >
+                  <a href="">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span
+                      class="cart__quantity d-flex justify-content-center align-items-center"
+                      >4</span
+                    >
+                  </a>
+
+                  <div class="cart__content p-3">
+                    <div class="cart__content-title">Không có sàn phẩm nào</div>
+                    <ul class="cart__content-list p-0">
+                      <li class="cart__content-item d-flex px-3">
+                        <div class="content__item-img me-3">
+                          <img
+                            src="/assets/img/products/chuoi-trai-01.jpg.webp"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="content__item-details">
+                          <div class="content__item-name">
+                            <a href=""> Chuối chín cả nải</a>
+                          </div>
+
+                          <div class="">
+                            <span class="content__item-price">12000</span>
+                            <span class="content__item-quantity">x12</span>
+                          </div>
+                        </div>
+
+                        <div class="content__item-delete">
+                          <div class="content__item-delete--btn text-end">
+                            <i class="fa-solid fa-xmark"></i>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div
+                      class="cart__content-total py-2 d-flex align-items-center"
+                    >
+                      Tổng tiền tạm tính: <b class="ms-2">12000 &#8363;</b>
+                    </div>
+                    <div class="cart__content-button">
+                      <a href="">
+                        <div class="pay--btn py-2 text-center">
+                          Tiến hành thanh toán
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- alternative header for responsive -->
+              <div class="col-12 d-xl-none d-flex align-items-center">
+                <form method="get" class="header__searchbar w-100 d-flex">
+                  <input
+                    type="text"
+                    class="ps-2 w-100"
+                    placeholder="Tìm kiếm sản phẩm"
+                  />
+                  <span
+                    class="header__searchbar-icon d-flex justify-content-center align-items-center"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="subheader d-md-block d-none">
+            <div class="subheader__item">
+              <i class="fa-solid fa-bars"></i>
+              <span>Danh mục</span>
+
+              <div
+                class="header__menubar-body header__menubar-popup p-0 border border-top"
+              >
+                <a
+                  href=""
+                  class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+                >
+                  <span class="menubar__item-left">
+                    <i class="fa-solid fa-lemon"></i>
+                    <span class="ms-2">Trái cây</span>
+                  </span>
+
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+
+                <a
+                  href=""
+                  class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+                >
+                  <span class="menubar__item-left">
+                    <i class="fa-solid fa-carrot"></i>
+                    <span class="ms-2">Rau củ</span>
+                  </span>
+
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+
+                <a
+                  href=""
+                  class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+                >
+                  <span class="menubar__item-left">
+                    <i class="fa-solid fa-bacon"></i>
+                    <span class="ms-2">Thịt cá và trứng</span>
+                  </span>
+
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+
+                <a
+                  href=""
+                  class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+                >
+                  <span class="menubar__item-left">
+                    <i class="fa-solid fa-candy-cane"></i>
+                    <span class="ms-2">Bánh kẹo</span>
+                  </span>
+
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header -->
+
+      <!-- start body -->
+      <div class="body">
+        <div class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb--desc">
+              <p>Trang chủ</p>
+              <p>/ Giỏ hàng (<span>10</span>)</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="cart">
+            <h2 class="cart--header">Giỏ hàng</h2>
+            <div class="cart--line"></div>
+            <div class="cart--body">
+              <div class="cart--body__products">
+                <!-- Item 1 -->
+                <div class="product--item">
+                  <div class="product--item__btnDel">Xóa</div>
+                  <div class="product--item__img">
+                    <img
+                      src="../../assets/img/product/banh_trang_mam_ruoc.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="product--item__info">
+                    <div class="info--name">
+                      Nho mẫu đơn Premium Hàn Quốc 450G
+                    </div>
+                    <div class="info--quantity">1 Hộp</div>
+                  </div>
+                  <div class="product--item__total">995,000₫</div>
+                  <div class="product--item__UpDown">
+                    <div class="down"><span>-</span></div>
+                    <div class="quantity"><span>5</span></div>
+                    <div class="up"><span>+</span></div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="product--item">
+                  <div class="product--item__btnDel">Xóa</div>
+                  <div class="product--item__img">
+                    <img
+                      src="../../assets/img/product/banh_trang_mam_ruoc.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="product--item__info">
+                    <div class="info--name">
+                      Nho mẫu đơn Premium Hàn Quốc 450G
+                    </div>
+                    <div class="info--quantity">1 Hộp</div>
+                  </div>
+                  <div class="product--item__total">995,000₫</div>
+                  <div class="product--item__UpDown">
+                    <div class="down"><span>-</span></div>
+                    <div class="quantity"><span>5</span></div>
+                    <div class="up"><span>+</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart--body__infoCus">
+                <h3 class="infoCus--heading">CHỌN THỜI GIAN NHẬN HÀNG</h3>
+                <div class="date-receive">
+                  <label for="datepicker">Ngày nhận hàng </label>
+                  <p class="date-receive-package">12/03/2023</p>
+
+                  <input type="date" name="" id="datepicker" hidden />
+                </div>
+
+                <!-- Bottom -->
+                <div class="date-receive date-receive--bottom">
+                  <label for="select-time">Thời gian nhận hàng </label>
+                  <select id="select-time">
+                    <option value="Giao hàng từ 8:00 - 10:00" selected>
+                      Giao hàng từ 8:00 - 10:00
+                    </option>
+                    <option value="Giao hàng từ 10:00 - 12:00 ">
+                      Giao hàng từ 10:00 - 12:00
+                    </option>
+                    <option value="Giao hàng từ 12:00 - 14:00 ">
+                      Giao hàng từ 12:00 - 14:00
+                    </option>
+                    <option value="Giao hàng từ 14:00 - 16:00">
+                      Giao hàng từ 14:00 - 16:00
+                    </option>
+                    <option value="Giao hàng từ 17:00 - 19:00">
+                      Giao hàng từ 17:00 - 19:00
+                    </option>
+                    <option value="Giao hàng từ 19:00 - 21:00">
+                      Giao hàng từ 19:00 - 21:00
+                    </option>
+                  </select>
+                </div>
+                <div class="infoCus--total">
+                  <div class="infoCus--total__heading">Tổng tiền</div>
+                  <div class="infoCus--total__price">1,417,500₫</div>
+                </div>
+                <div class="infoCus--submit-btn">
+                  <p>Tiến hành thanh toán</p>
+                </div>
+                <a href="/">
+                  <div class="go-home">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <a href="/">Tiếp tục mua hàng</a>
+                  </div>
+                </a>
+                <div class="infoCus--notice">
+                  <p>
+                    Nếu bạn có lưu ý đặc biệt gì cho đơn hàng, hãy điền ở đây
+                    cho Farmers Market nhé!
+                  </p>
+                  <textarea
+                    name=""
+                    id="text-notice"
+                    cols="46"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <div class="infoCus--phone-number">
+                  <label for="cus-phone">Thông tin thành viên</label>
+                  <input
+                    id="cus-phone"
+                    type="text"
+                    placeholder="Số điện thoại..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="cart--exportbill"></div>
+          </div>
+        </div>
+      </div>
+      <!-- end body -->
+
+      <!-- start footer -->
+      <div class="footer">
+        <div style="background-color: #f7f7f7">
+          <div class="footer__top py-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-9 col-md-6">
+                <h4 class="footer__top-title text-center mb-3">
+                  Đăng ký nhận thông tin khuyến mãi
+                </h4>
+                <div class="footer__top-register">
+                  <form action="" class="d-flex w-100">
+                    <input
+                      type="email"
+                      class="email--input px-2 w-100"
+                      placeholder="Nhập địa chỉ email"
+                    />
+                    <input
+                      type="submit"
+                      class="submit--btn px-3 py-2"
+                      value="Đăng ký"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="footer__mid d-md-block d-none py-5">
+            <div class="row">
+              <div class="col-3">
+                <h4 class="footer__mid-title mb-4">HỖ TRỢ KHÁCH HÀNG</h4>
+                <a href="">Chính sách giao hàng</a> <br />
+                <a href="">Chính sách đổi trả</a> <br />
+                <a href="">Chính sách thành viên</a> <br />
+                <a href="">Hướng dẫn mua hàng và hoàn tiền</a> <br />
+                <a href="">Chính sách xuất hóa đơn đỏ</a> <br />
+                <a href="">Giấy chứng nhận Vệ sinh ATTP</a> <br />
+
+                <br />
+
+                <b>CÁC KÊNH HỖ TRỢ KHÁCH HÀNG</b> <br />
+                - Thời gian: 7h30 - 22h30 <br />
+                (Tất cả các ngày trong tuần) <br />
+                - Hotline: <a href="tel: 1800 69 30">1800 69 30</a> (miễn phí
+                cước) <br />
+                - Email tiếp nhận : support@farmersmarket.vn <br />
+                - Các Cửa hàng Farmersmarket <br />
+                - Websites : https://farmersmarket.vn/
+              </div>
+              <div class="col-3">
+                <h4 class="footer__mid-title mb-4">VỀ FARMERS MARKET</h4>
+                <a href="">Giới thiệu</a> <br />
+                <a href="">Chính Sách Quyền Riêng Tư</a> <br />
+                <a href="">Liên hệ</a> <br />
+
+                <br />
+
+                Giấy Phép Bán Lẻ Rượu: <br />
+                - Chi nhánh Nguyễn Thị Minh Khai: <br />
+                Số 73/GP-PKT cấp ngày 16/12/2019 <br />
+                - Chi nhánh Hoàng Hoa Thám: <br />
+                Số 32/2020/GPR-PKT cấp ngày 24/08/2020 <br />
+                - Chi nhánh Phan Xích Long: <br />
+                Số 186/GPR-PKT cấp ngày 25/12/2019 <br />
+                - Chi nhánh Nguyễn Thị Thập: <br />
+                Số 1603/GP-PKT cấp ngày 21/12/2019 <br />
+                - Chi nhánh Hai Bà Trưng <br />
+                Số 859/GP(SĐ)-PKT cấp ngày 01/11/2022
+              </div>
+              <div class="col-3">
+                <h4 class="footer__mid-title mb-4">HỆ THỐNG CỬA HÀNG</h4>
+
+                <div class="about mb-2">
+                  Thời gian mở cửa: Từ 6h30 - 22h30 <br />
+                  (Tất cả các ngày trong tuần) <br />
+                </div>
+
+                <div class="about mb-2">
+                  <b>Farmers Market Hai Bà Trưng</b> <br />
+                  104, Hai Bà Trưng, Phường Đa Kao, Quận 1
+                </div>
+
+                <div class="about mb-2">
+                  <b>Farmers Market Nguyễn Thị Minh Khai</b> <br />
+                  496 Nguyễn Thị Minh Khai, Phường 2, Quận 3
+                </div>
+
+                <div class="about mb-2">
+                  <b>Farmers Market Phan Xích Long</b> <br />
+                  218 Phan Xích Long, Phường 2, Phú Nhuận
+                </div>
+
+                <div class="about mb-2">
+                  <b>Farmers Market Nguyễn Thị Thập</b> <br />
+                  486 Nguyễn Thị Thập, Tân Quy, Quận 7
+                </div>
+
+                <div class="about mb-2">
+                  <b>Farmers Market Hoàng Hoa Thám</b> <br />
+                  99 Hoàng Hoa Thám, Phường 6 Bình Thạnh
+                </div>
+              </div>
+              <div class="col-3">
+                <h4 class="footer__mid-title">THEO DÕI CHÚNG TÔI</h4>
+
+                <br />
+                <br />
+
+                <div class="about">
+                  <b>CỬA HÀNG FACEBOOK</b> <br />
+                  <a href="">https://www.facebook.com/farmersmarket.vn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom py-3">
+            <div class="d-flex justify-content-between">
+              <div class="footer__bottom-left">
+                <h5 class="footer__bottom-title mb-1">
+                  Bản quyền của Công Ty TNHH Thương Mại Laria
+                </h5>
+                Giấy chứng nhận Đăng ký Kinh doanh số 0312461711 do Sở Kế hoạch
+                và Đầu tư Thành phố Hồ Chí Minh cấp ngày 17/09/2013 <br />
+                Địa chỉ:496 - 496A - 496B Nguyễn Thị Minh Khai, Phường 2, Quận
+                3, TP Hồ Chí Minh. Đăng ký thay đổi lần 4 ngày 14/05/2020.
+                <br />
+                Công ty TNHH Thương mại Laria: Số 73/GP-PKT cấp ngày 16/12/2019
+                <br />
+              </div>
+
+              <div class="footer__bottom-right d-flex align-items-center">
+                <a href="">
+                  <img
+                    src="/assets/img/bo-cong-thuong-2_60693b95ee2146fea1057b5b29f06ab4.webp"
+                    class="bottom--img"
+                    alt=""
+                  />
+                </a>
+
+                <a href="">
+                  <img
+                    src="/assets/img/logoSaleNoti.png"
+                    class="bottom--img"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end footer -->
+    </div>
+
+    <!-- menubar modal -->
+    <div class="modal" id="menubar-list">
+      <div class="modal__overlay" id="modal-overlay">
+        <div class="header__menubar-list p-0 m-0">
+          <div
+            class="header__item d-flex align-items-center py-3 px-3 border-bottom border-dark-subtle"
+          >
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="header__item-body d-flex flex-column">
+              <a href="">Đăng nhập</a>
+              <a href="">Đăng ký</a>
+            </div>
+          </div>
+
+          <ul class="header__menubar-body scroll p-0">
+            <a
+              href=""
+              class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+            >
+              <span class="menubar__item-left">
+                <i class="fa-solid fa-lemon"></i>
+                <span class="ms-2">Trái cây</span>
+              </span>
+
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a
+              href=""
+              class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+            >
+              <span class="menubar__item-left">
+                <i class="fa-solid fa-carrot"></i>
+                <span class="ms-2">Rau củ</span>
+              </span>
+
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a
+              href=""
+              class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+            >
+              <span class="menubar__item-left">
+                <i class="fa-solid fa-bacon"></i>
+                <span class="ms-2">Thịt cá và trứng</span>
+              </span>
+
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a
+              href=""
+              class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
+            >
+              <span class="menubar__item-left">
+                <i class="fa-solid fa-candy-cane"></i>
+                <span class="ms-2">Bánh kẹo</span>
+              </span>
+
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </ul>
+
+          <div class="header__menubar-footer container-fluid">
+            <div
+              class="row d-flex justify-content-center align-items-center h-100"
+            >
+              <a
+                href=""
+                class="menubar__social col-6 d-flex justify-content-center align-items-center border h-100"
+              >
+                <i class="fa-brands fa-facebook"></i>
+                <span class="ms-2">Facebook</span>
+              </a>
+              <a
+                href=""
+                class="menubar__social col-6 d-flex justify-content-center align-items-center border h-100"
+              >
+                <i class="fa-brands fa-square-instagram"></i>
+                <span class="ms-2">Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contact--fixed d-flex">
+      <ul class="contact__list d-flex align-items-center m-0" id="contact-list">
+        <li
+          class="contact__list-item message d-flex justify-content-center align-items-center me-2"
+        >
+          <a href="">
+            <i class="fa-brands fa-facebook-messenger"></i>
+          </a>
+        </li>
+
+        <li
+          class="contact__list-item phone d-flex justify-content-center align-items-center me-2"
+        >
+          <a href="">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+
+        <li
+          class="contact__list-item email d-flex justify-content-center align-items-center me-2"
+        >
+          <a href="">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div
+        class="contact__button d-flex flex-column justify-content-center align-items-center"
+        id="contact-button"
+      >
+        <i class="fa-solid fa-message"></i>
+        <span>Hỗ trợ</span>
+      </div>
+    </div>
+
+    <!-- Js -->
+    <script>
+      let productsInCart = localStorage.getItem("products")
+        ? JSON.parse(localStorage.getItem("products"))
+        : [];
+      document.addEventListener(
+        "DOMContentLoaded",
+        function updateCartQuantity() {
+          var cartQuantity = document.querySelector(".cart__quantity");
+          var cartQuantityValue = 0;
+          productsInCart.forEach((item) => {
+            cartQuantityValue += item.soluong;
+          });
+          cartQuantity.innerHTML = cartQuantityValue;
+        }
+      );
+      var menubar_icon = document.getElementById("menubar-icon");
+      menubar_icon.addEventListener("click", openMenubar);
+
+      var modal__overlay = document.getElementById("modal-overlay");
+      modal__overlay.addEventListener("click", closeMenubar);
+
+      var contact__button = document.getElementById("contact-button");
+      contact__button.addEventListener("click", socialDisplay);
+
+      function openMenubar() {
+        var menubar_list = document.getElementById("menubar-list");
+
+        if (
+          menubar_list.style.display == "" ||
+          menubar_list.style.display == "none"
+        ) {
+          menubar_list.style.display = "block";
+        } else if (menubar_list.style.display == "block") {
+          menubar_list.style.display = "none";
+        }
+      }
+
+      function closeMenubar() {
+        var menubar_list = document.getElementById("menubar-list");
+
+        if (menubar_list.style.display == "block") {
+          menubar_list.style.display = "none";
+        }
+      }
+
+      function socialDisplay() {
+        var contact__list = document.getElementById("contact-list");
+
+        if (contact__list.classList.contains("open")) {
+          contact__list.classList.remove("open");
+        } else {
+          contact__list.classList.add("open");
+        }
+      }
+    </script>
+
+    <!-- Bootstrap -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+    <script src="/lib/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+
+    <!-- Fontawsome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script type="module" src="../../assets/JS/addProductIntoCart.js"></script>
+    <script type="module" src="../../assets/JS/cart.js"></script>
+  </body>
+</html>

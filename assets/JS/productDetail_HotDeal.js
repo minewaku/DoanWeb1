@@ -1,5 +1,5 @@
-import { hotDealFruits as fruitList } from "./hotDealFruit.js";
-
+import hotDealFruits from "./hotDealFruit.js";
+var fruitList = hotDealFruits;
 const btnKgAct = document.querySelector(".position-relative.active");
 const mainProduct = document.querySelector(".product");
 const listImg = document.querySelectorAll(".product-left .slide img");

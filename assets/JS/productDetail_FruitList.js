@@ -1,4 +1,5 @@
 import fruitList from "./fruitList.js";
+import handleAddProductToCart from "./addProductIntoCart.js";
 
 const btnKgAct = document.querySelector(".position-relative.active");
 const mainProduct = document.querySelector(".product");
@@ -390,6 +391,12 @@ function goToDetail() {
   });
 }
 
+function addToCart() {
+  var btnAddToCart = document.querySelector(".button-action #addtoCart");
+  var btnCheckOut = document.querySelector(".button-action #check-out");
+  btnAddToCart.addEventListener("click", handleAddProductToCart);
+}
+
 function start(productId) {
   renderMainProduct(productId);
   renderDesc(productId);
@@ -405,6 +412,7 @@ function start(productId) {
   divideList(fruitList);
   renderSameProduct(list1);
   goToDetail();
+  addToCart();
 }
 
 function renderProductDetail() {

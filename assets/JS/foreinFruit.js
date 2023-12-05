@@ -509,3 +509,5 @@ export const foreinFruit = [
     },
   },
 ];
+
+export default foreinFruit;

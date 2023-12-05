@@ -1,6 +1,5 @@
-import { foreinFruit as fruitList } from "./foreinFruit.js";
-console.log(fruitList);
-
+import foreinFruit from "./foreinFruit.js";
+var fruitList = foreinFruit;
 const productFruit = document.querySelector(".product-container");
 const checkboxes = document.querySelectorAll(".checkbox");
 const seclectedFillter = document.querySelectorAll(".selected-fillter-item");

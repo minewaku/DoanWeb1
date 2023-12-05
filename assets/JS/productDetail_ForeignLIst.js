@@ -1,5 +1,6 @@
-import { foreinFruit as fruitList } from "./foreinFruit.js";
-
+import foreinFruit from "./foreinFruit.js";
+import handleAddProductToCart from "./addProductIntoCart.js";
+var fruitList = foreinFruit;
 const btnKgAct = document.querySelector(".position-relative.active");
 const mainProduct = document.querySelector(".product");
 const listImg = document.querySelectorAll(".product-left .slide img");
@@ -390,6 +391,13 @@ function goToDetail() {
   });
 }
 
+function addToCart() {
+  var btnAddToCart = document.querySelector(".button-action #addtoCart");
+  var btnCheckOut = document.querySelector(".button-action #check-out");
+  btnAddToCart.addEventListener("click", handleAddProductToCart);
+  btnCheckOut.addEventListener("click", handleAddProductToCart);
+}
+
 function start(productId) {
   renderMainProduct(productId);
   renderDesc(productId);
@@ -405,6 +413,7 @@ function start(productId) {
   divideList(fruitList);
   renderSameProduct(list1);
   goToDetail();
+  addToCart();
 }
 
 function renderProductDetail() {

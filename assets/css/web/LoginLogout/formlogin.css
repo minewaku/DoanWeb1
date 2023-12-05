@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#select {
+  background-color: #f4f4f4;
+  position: relative;
+}
+#select .box {
+  background-color: #fff;
+}
+
+#select .menu {
+  background-color: #eee;
+  list-style: none;
+  padding: 12px 0;
+}
+
+#select .menu li {
+  display: inline-block;
+}
+#select .space {
+  height: 16px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+#form {
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form .form-title {
+  padding-top: 5px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+  margin: 0 74px;
+}
+
+#form .form-title .form-warning {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#form .form-title .form-instruct {
+  margin-top: 10px;
+}
+
+#form .form-instruct a {
+  color: #007bff;
+}
+
+#form .form-login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+#form .form-login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-login form .input-password,
+.form-login form .input-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-login form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-login form span {
+  color: red;
+}
+
+.form-login form #password,
+.form-login form #email {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  margin: 8px 0;
+  border: 1px solid #e1e1e1;
+  font-size: 16px;
+  outline: none;
+}
+.form-login form .email-title,
+.form-login form .password-title {
+  color: #12487f;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form-login form .instruct {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+form .instruct a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+form .instruct a:hover {
+  color: #0056b3;
+}
+
+form .change {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+form .change p {
+  font-size: 14px;
+  font-weight: 500;
+}
+form .change a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+form .register {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-login form .btn {
+  height: 40px;
+  width: 570px;
+  background-color: #12487f;
+  color: #fff;
+  font-size: 19px;
+  border-radius: 4px;
+  border: 1px solid #12487f;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: 400;
+  transition: all 0.15s;
+}
+
+.form-login form .btn:hover {
+  opacity: 0.8;
+}
+
+.form-login form .btn:active {
+  opacity: 0.5;
+}

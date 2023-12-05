@@ -1,4 +1,4 @@
-export const hotDealFruits = [
+const hotDealFruits = [
   {
     id: 1,
     name: "Dưa lưới TL3 (1.2 - 1.6Kg/Trái)",
@@ -499,3 +499,5 @@ export const hotDealFruits = [
     },
   },
 ];
+
+export default hotDealFruits;
