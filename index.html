@@ -24,6 +24,81 @@
 
     <!-- Js -->
 
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
     <title>FARMERS MARKET</title>
   </head>
   <body>
@@ -136,7 +211,7 @@
                         Tổng tiền tạm tính: <b class="ms-2">12000 &#8363;</b>
                       </div>
                       <div class="cart__content-button">
-                        <a href="">
+                        <a href="./views/web/cart.html">
                           <div class="pay--btn py-2 text-center">
                             Tiến hành thanh toán
                           </div>
@@ -270,7 +345,7 @@
                       Tổng tiền tạm tính: <b class="ms-2">12000 &#8363;</b>
                     </div>
                     <div class="cart__content-button">
-                      <a href="">
+                      <a href="./views/web/cart.html">
                         <div class="pay--btn py-2 text-center">
                           Tiến hành thanh toán
                         </div>
@@ -307,7 +382,7 @@
                 class="header__menubar-body header__menubar-popup p-0 border border-top"
               >
                 <a
-                  href=""
+                  href="#traicay"
                   class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
                 >
                   <span class="menubar__item-left">
@@ -399,7 +474,7 @@
               </a>
             </div>
 
-            <ul class="body__product-list row mx-2 px-0 mt-3">
+            <ul class="body__product-list listHotDealList row mx-2 px-0 mt-3">
               <li class="product__list-item col-md-2-4 col-4 mb-3">
                 <div class="wrapper">
                   <div class="product__img">
@@ -702,11 +777,15 @@
 
           <div class="body__product p-2 mb-3">
             <!-- <div class="container-fluid"> -->
-            <div class="body__product-title py-2">
-              <a href=""> Bán chạy nhất | Trái cây nhập </a>
+            <div id="traicay" class="body__product-title py-2">
+              <a href="./views/web/more-product-foreignFruit.html">
+                Bán chạy nhất | Trái cây nhập
+              </a>
             </div>
 
-            <ul class="body__product-list--wrap row mx-2 px-0 mt-3">
+            <ul
+              class="body__product-list--wrap listForeignList row mx-2 px-0 mt-3"
+            >
               <li class="product__list-item col-md-4-8 col-12 mb-3">
                 <div class="wrapper">
                   <div class="product__img">
@@ -964,7 +1043,9 @@
               <a href=""> Bán chạy nhất | Trái cây Việt </a>
             </div>
 
-            <ul class="body__product-list--wrap row mx-2 px-0 mt-3">
+            <ul
+              class="body__product-list--wrap listFruitList row mx-2 px-0 mt-3"
+            >
               <li class="product__list-item col-md-4-8 col-12 mb-3">
                 <div class="wrapper">
                   <div class="product__img">
@@ -1212,167 +1293,6 @@
             </div>
             <!-- </div> -->
           </div>
-
-          <div class="body__product p-2 mb-3">
-            <!-- <div class="container-fluid"> -->
-            <div class="body__product-title py-2">
-              <a href=""> Bán chạy nhất | Đi chợ giá hời </a>
-            </div>
-
-            <ul class="body__product-list row mx-2 px-0 mt-3">
-              <li class="product__list-item col-md-2-4 col-4 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img
-                        src="/assets/img/products/chuoi-trai-01.jpg.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <div class="product__details px-2 mt-3">
-                    <span>Cam Sành</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        12000&#8363;
-                      </div>
-                      <div class="product__price-old me-1">10000&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-
-              <li class="product__list-item col-md-2-4 col-4 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img
-                        src="/assets/img/products/chuoi-trai-01.jpg.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <div class="product__details px-2 mt-3">
-                    <span>Cam Sành</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        12000&#8363;
-                      </div>
-                      <div class="product__price-old me-1">10000&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-
-              <li class="product__list-item col-md-2-4 col-4 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img
-                        src="/assets/img/products/chuoi-trai-01.jpg.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <div class="product__details px-2 mt-3">
-                    <span>Cam Sành</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        12000&#8363;
-                      </div>
-                      <div class="product__price-old me-1">10000&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-
-              <li class="product__list-item col-md-2-4 col-4 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img
-                        src="/assets/img/products/chuoi-trai-01.jpg.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <div class="product__details px-2 mt-3">
-                    <span>Cam Sành</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        12000&#8363;
-                      </div>
-                      <div class="product__price-old me-1">10000&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-
-              <li class="product__list-item col-md-2-4 col-4 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img
-                        src="/assets/img/products/chuoi-trai-01.jpg.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-
-                  <div class="product__details px-2 mt-3">
-                    <span class="product__details-name">Cam Sành</span>
-                    <div class="product__price align-items-center">
-                      <span class="product__price-current me-1"
-                        >12000&#8363;</span
-                      >
-                      <span class="product__price-old me-1">10000&#8363;</span>
-                      <span class="product__price-off px-1"> - 10%</span>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <div
-              class="body__product-more d-flex justify-content-center px-2 py-2 my-3"
-            >
-              <div class="product__more--btn px-3 py-2">
-                <a href="">
-                  Xem tất cả
-                  <i class="fa-solid fa-chevron-right"></i>
-                </a>
-              </div>
-            </div>
-            <!-- </div> -->
-          </div>
         </div>
       </div>
       <!-- end body -->
@@ -1550,7 +1470,7 @@
 
           <ul class="header__menubar-body scroll p-0">
             <a
-              href=""
+              href="#traicay"
               class="menubar__body-item py-2 px-3 d-flex justify-content-between align-items-center"
             >
               <span class="menubar__item-left">
@@ -1660,7 +1580,198 @@
     </div>
 
     <!-- Js -->
-    <script>
+    <script type="module">
+      // import List
+      import fruitList from "./assets/JS/fruitList.js";
+      import foreinFruit from "./assets/JS/foreinFruit.js";
+      import hotDealFruits from "./assets/JS/hotDealFruit.js";
+      console.log(hotDealFruits);
+      // Render FruitList
+      let newFruitList = fruitList.slice(0, 8);
+
+      let containerFruitList = document.querySelector(".listFruitList");
+      let htmlsFruitList = newFruitList.map((product) => {
+        return `
+        <li class="product__list-item col-md-2-4 col-4 mb-3">
+                <div class="wrapper">
+                  <div class="product__img">
+                    <a href="">
+                      <img
+                        src="${product.srcImg}"
+                        alt="${product.name}"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="product__details px-2 mt-3">
+                    <span>${product.name}</span>
+                    <div class="product__price d-flex align-items-center">
+                      <div class="product__price-current me-1">
+                        ${(function (product) {
+                          var formattedNumber = new Intl.NumberFormat().format(
+                            product.price
+                          );
+                          return formattedNumber;
+                        })(product)}₫;
+                      </div>
+                      <div class="product__price-old me-1">${(function (
+                        product
+                      ) {
+                        var formattedNumber = new Intl.NumberFormat().format(
+                          product.price + (product.price * 1) / 10
+                        );
+                        return formattedNumber;
+                      })(product)}&#8363;</div>
+                      <div class="product__price-off px-1">- 10%</div>
+                    </div>
+                  </div>
+
+                  <div class="product__badge p-2">
+                    <img src="/assets/img/label_1.webp" alt="" />
+                  </div>
+                </div>
+              </li>
+        `;
+      });
+      containerFruitList.innerHTML =
+        `
+      <li class="product__list-item col-md-4-8 col-12 mb-3">
+                <div class="wrapper">
+                  <div class="product__img">
+                    <a href="">
+                      <img src="/assets/img/banners/section_hot.webp" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </li>
+      ` + htmlsFruitList.join(" ");
+      console.log(containerFruitList);
+
+      // Render HotDealList
+      let newHotDealList = hotDealFruits.slice(0, 10);
+
+      let containerHotDealList = document.querySelector(".listHotDealList");
+      let htmlsHotDealList = newHotDealList.map((product) => {
+        return `
+        <li class="product__list-item col-md-2-4 col-4 mb-3">
+                <div class="wrapper">
+                  <div class="product__img">
+                    <a href="">
+                      <img
+                        src="${product.srcImg}"
+                        alt="${product.name}"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="product__details px-2 mt-3">
+                    <span>${product.name}</span>
+                    <div class="product__price d-flex align-items-center">
+                      <div class="product__price-current me-1">
+                        ${(function (product) {
+                          var formattedNumber = new Intl.NumberFormat().format(
+                            product.price
+                          );
+                          return formattedNumber;
+                        })(product)}₫;
+                      </div>
+                      <div class="product__price-old me-1">${(function (
+                        product
+                      ) {
+                        var formattedNumber = new Intl.NumberFormat().format(
+                          product.price + (product.price * 1) / 10
+                        );
+                        return formattedNumber;
+                      })(product)}&#8363;</div>
+                      <div class="product__price-off px-1">- 10%</div>
+                    </div>
+                  </div>
+
+                  <div class="product__badge p-2">
+                    <img src="/assets/img/label_1.webp" alt="" />
+                  </div>
+                </div>
+              </li>
+        `;
+      });
+      containerHotDealList.innerHTML = htmlsHotDealList.join(" ");
+      console.log(containerFruitList);
+
+      //
+
+      // Render ForeignList
+      let newForeignList = foreinFruit.slice(0, 8);
+
+      let containerForeignList = document.querySelector(".listForeignList");
+      let htmlsForeignList = newForeignList.map((product) => {
+        return `
+  <li class="product__list-item col-md-2-4 col-4 mb-3">
+          <div class="wrapper">
+            <div class="product__img">
+              <a href="">
+                <img
+                  src="${product.srcImg}"
+                  alt="${product.name}"
+                />
+              </a>
+            </div>
+
+            <div class="product__details px-2 mt-3">
+              <span>${product.name}</span>
+              <div class="product__price d-flex align-items-center">
+                <div class="product__price-current me-1">
+                  ${(function (product) {
+                    var formattedNumber = new Intl.NumberFormat().format(
+                      product.price
+                    );
+                    return formattedNumber;
+                  })(product)}₫;
+                </div>
+                <div class="product__price-old me-1">${(function (product) {
+                  var formattedNumber = new Intl.NumberFormat().format(
+                    product.price + (product.price * 1) / 10
+                  );
+                  return formattedNumber;
+                })(product)}&#8363;</div>
+                <div class="product__price-off px-1">- 10%</div>
+              </div>
+            </div>
+
+            <div class="product__badge p-2">
+              <img src="/assets/img/label_1.webp" alt="" />
+            </div>
+          </div>
+        </li>
+  `;
+      });
+      containerForeignList.innerHTML =
+        `
+  <li class="product__list-item col-md-4-8 col-12 mb-3">
+          <div class="wrapper">
+            <div class="product__img">
+              <a href="">
+                <img
+                  src="/assets/img/banners/section_pro_banner.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </li>
+` + htmlsForeignList.join(" ");
+      console.log(containerFruitList);
+
+      let productsInCart = localStorage.getItem("products")
+        ? JSON.parse(localStorage.getItem("products"))
+        : [];
+      document.addEventListener("DOMContentLoaded", () => {
+        var cartQuantity = document.querySelector(".cart__quantity");
+        var cartQuantityValue = 0;
+        productsInCart.forEach((item) => {
+          cartQuantityValue += item.soluong;
+        });
+        cartQuantity.innerHTML = cartQuantityValue;
+      });
       var menubar_icon = document.getElementById("menubar-icon");
       menubar_icon.addEventListener("click", openMenubar);
 

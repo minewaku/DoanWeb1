@@ -395,6 +395,7 @@ function addToCart() {
   var btnAddToCart = document.querySelector(".button-action #addtoCart");
   var btnCheckOut = document.querySelector(".button-action #check-out");
   btnAddToCart.addEventListener("click", handleAddProductToCart);
+  btnCheckOut.addEventListener("click", handleAddProductToCart);
 }
 
 function start(productId) {

@@ -7,14 +7,14 @@ retrieval.addEventListener("click", (e) => {
     alert(`Mật khẩu của bạn được hỗ trợ lấy lại là ${password}`);
     document.querySelector(".error").innerHTML =
       "<i class='bx bx-check-circle'></i> Lấy lại thành công";
-    document.querySelector(".error").style.color="green";
-    document.querySelector(".error").style.fontSize="14px";
-    booleanEmail=false;
+    document.querySelector(".error").style.color = "green";
+    document.querySelector(".error").style.fontSize = "14px";
+    booleanEmail = false;
   } else {
     document.querySelector(".error").innerHTML =
       "<i class='bx bx-error-circle'></i> Email vẫn chưa được đăng ký";
-    document.querySelector(".error").style.color="red";
-    document.querySelector(".error").style.fontSize="14px";
+    document.querySelector(".error").style.color = "red";
+    document.querySelector(".error").style.fontSize = "14px";
   }
 });
 
@@ -34,6 +34,18 @@ let checkEmail = (email) => {
     }
   }
 };
+
+let productsInCart = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+document.addEventListener("DOMContentLoaded", () => {
+  var cartQuantity = document.querySelector(".cart__quantity");
+  var cartQuantityValue = 0;
+  productsInCart.forEach((item) => {
+    cartQuantityValue += item.soluong;
+  });
+  cartQuantity.innerHTML = cartQuantityValue;
+});
 
 const back = document.querySelector(".button-back button");
 back.addEventListener("click", () => {

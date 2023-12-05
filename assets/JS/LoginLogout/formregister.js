@@ -60,7 +60,7 @@ let checkFirstname = () => {
       "<i class='bx bx-error-circle'></i>";
     document.querySelector(".check-firstname").style.color = "red";
     booleanFirstName = false;
-  } else if (!firstName.value.match(/^[a-zA-Z]{3,}$/g)) {
+  } else if (!firstName.value.match(/^[a-zA-Z ]{2,}$/g)) {
     firstName.style.border = "1px solid red";
     document.querySelector(".firstname-error").style.color = "red";
     document.querySelector(".firstname-error").innerHTML =
@@ -91,7 +91,7 @@ let checkLastname = () => {
       "<i class='bx bx-error-circle'></i>";
     document.querySelector(".check-lastname").style.color = "red";
     booleanLastName = false;
-  } else if (!lastName.value.match(/^[a-zA-Z]{3,}$/g)) {
+  } else if (!lastName.value.match(/^[a-zA-Z]{2,}$/g)) {
     lastName.style.border = "1px solid red";
     document.querySelector(".lastname-error").style.color = "red";
     document.querySelector(".lastname-error").innerHTML =
@@ -153,7 +153,7 @@ let checkEmail = () => {
       "<i class='bx bx-error-circle'></i>";
     document.querySelector(".check-email").style.color = "red";
     booleanEmail = false;
-  } else if (!email.value.match(/^[A-Za-z0-9._]+@gmail.com$/g)) {
+  } else if (!email.value.match(/^[A-za-z][A-Za-z0-9._]+@[A-za-z]{4,}.com$/g)) {
     email.style.border = "1px solid red";
     document.querySelector(".email-error").style.color = "red";
     document.querySelector(".email-error").innerHTML =
@@ -428,3 +428,15 @@ let checkRe = () => {
     booleanConfirm = true;
   }
 };
+
+let productsInCart = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+document.addEventListener("DOMContentLoaded", () => {
+  var cartQuantity = document.querySelector(".cart__quantity");
+  var cartQuantityValue = 0;
+  productsInCart.forEach((item) => {
+    cartQuantityValue += item.soluong;
+  });
+  cartQuantity.innerHTML = cartQuantityValue;
+});

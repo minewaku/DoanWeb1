@@ -45,3 +45,15 @@ function checkLo(emailLogin, passwordLogin) {
     }
   }
 }
+
+let productsInCart = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+document.addEventListener("DOMContentLoaded", () => {
+  var cartQuantity = document.querySelector(".cart__quantity");
+  var cartQuantityValue = 0;
+  productsInCart.forEach((item) => {
+    cartQuantityValue += item.soluong;
+  });
+  cartQuantity.innerHTML = cartQuantityValue;
+});

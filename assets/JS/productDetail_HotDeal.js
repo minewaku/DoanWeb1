@@ -1,4 +1,5 @@
 import hotDealFruits from "./hotDealFruit.js";
+import handleAddProductToCart from "./addProductIntoCart.js";
 var fruitList = hotDealFruits;
 const btnKgAct = document.querySelector(".position-relative.active");
 const mainProduct = document.querySelector(".product");
@@ -390,6 +391,25 @@ function goToDetail() {
   });
 }
 
+let productsInCart = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+document.addEventListener("DOMContentLoaded", () => {
+  var cartQuantity = document.querySelector(".cart__quantity");
+  var cartQuantityValue = 0;
+  productsInCart.forEach((item) => {
+    cartQuantityValue += item.soluong;
+  });
+  cartQuantity.innerHTML = cartQuantityValue;
+});
+
+function addToCart() {
+  var btnAddToCart = document.querySelector(".button-action #addtoCart");
+  var btnCheckOut = document.querySelector(".button-action #check-out");
+  btnAddToCart.addEventListener("click", handleAddProductToCart);
+  btnCheckOut.addEventListener("click", handleAddProductToCart);
+}
+
 function start(productId) {
   renderMainProduct(productId);
   renderDesc(productId);
@@ -405,6 +425,7 @@ function start(productId) {
   divideList(fruitList);
   renderSameProduct(list1);
   goToDetail();
+  addToCart();
 }
 
 function renderProductDetail() {
