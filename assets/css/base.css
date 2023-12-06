@@ -1,5 +1,9 @@
 :root {
     --primary-color: #12487F;
+    --admin-primary-color: #343a40;
+    --admin-text-color: #d6d8d9;
+    --admin-bg-color: #454d55;
+    --admin-text-color-2: #343a40;
     --gray-color: #f3f2f2;
     --white-color: white;
     --black-color: black;
