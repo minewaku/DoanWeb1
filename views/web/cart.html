@@ -498,12 +498,32 @@
               </div>
               <div class="cart--body__infoCus">
                 <h3 class="infoCus--heading">CHỌN THỜI GIAN NHẬN HÀNG</h3>
+
                 <div class="date-receive">
+                  <div class="calendar-box">
+                    <label for="datepicker">Ngày nhận hàng </label>
+                    <input
+                      type="text"
+                      id="dateInput"
+                      placeholder="Select a date"
+                      autocomplete="off"
+                    />
+                    <div class="calendar" id="calendar">
+                      <div class="header">
+                        <button id="prevBtn">&lt;</button>
+                        <h2 id="monthYear">Month Year</h2>
+                        <button id="nextBtn">&gt;</button>
+                      </div>
+                      <div class="days" id="daysContainer"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="date-receive">
                   <label for="datepicker">Ngày nhận hàng </label>
                   <p class="date-receive-package">12/03/2023</p>
 
                   <input type="date" name="" id="datepicker" hidden />
-                </div>
+                </div> -->
 
                 <!-- Bottom -->
                 <div class="date-receive date-receive--bottom">

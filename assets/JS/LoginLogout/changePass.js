@@ -35,6 +35,41 @@ let checkEmail = (email) => {
   }
 };
 
+// Login / Logout
+document.addEventListener("DOMContentLoaded", () => {
+  let boxUser = document.querySelector(
+    "li.header__item.d-none.d-md-flex.d-none.align-items-center.me-4"
+  );
+  let loggedInAccountIndex = JSON.parse(
+    localStorage.getItem("loggedInAccountIndex")
+  );
+  let UserInfo = JSON.parse(localStorage.getItem("UsersInfo"));
+  let isLogin = JSON.parse(localStorage.getItem("isLogin"));
+
+  if (isLogin) {
+    boxUser.innerHTML = "";
+    boxUser.innerHTML = `<i class="fa-solid fa-circle-user"></i>
+                      <div class="header__item-body d-flex flex-column">
+                        <a href="#!">Chào, ${UserInfo[loggedInAccountIndex].firstNameUser}</a>
+                        <a href="/" class="btn-logOut">Đăng xuất</a>
+                      </div>`;
+    logOut();
+  } else {
+    boxUser.innerHTML = `<i class="fa-solid fa-circle-user"></i>
+                      <div class="header__item-body d-flex flex-column">
+                        <a href="./views/web/login.html">Đăng nhập</a>
+                        <a href="./views/web/register.html">Đăng ký</a>
+                      </div>`;
+  }
+});
+
+function logOut() {
+  let btnLogOut = document.querySelector("a.btn-logOut");
+  btnLogOut.addEventListener("click", () => {
+    localStorage.removeItem("isLogin");
+  });
+}
+
 let productsInCart = localStorage.getItem("products")
   ? JSON.parse(localStorage.getItem("products"))
   : [];

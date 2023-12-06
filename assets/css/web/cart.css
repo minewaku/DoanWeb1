@@ -174,7 +174,7 @@ input[type="date"] {
   border-radius: 5px;
   border: 1px solid #999;
   background-color: #eee;
-  padding: 5px 20px;
+  padding: 5px 20px 16px 20px;
 }
 
 .date-receive label {
@@ -276,5 +276,87 @@ select option:checked {
   padding: 10px 15px;
   border-radius: 10px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+.calendar-box {
+  border-radius: 10px;
+  background-color: white;
+  width: 300px;
+}
+
+.calendar-box .calendar-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.calendar-box .calendar {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.calendar-box .header {
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.calendar-box #prevBtn,
+.calendar-box #nextBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calendar-box #monthYear {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.calendar-box .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.calendar-box .day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-box .day.current {
+  background-color: #3498db;
+  color: white;
+}
+
+.calendar-box .day.selected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.calendar-box #dateInput {
+  width: 100%;
+  padding: 10px;
+  background-color: #eeeeee;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
 }

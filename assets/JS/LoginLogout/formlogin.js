@@ -10,7 +10,9 @@ putOut.addEventListener("click", (e) => {
   checkLo(emailLogin, passwordLogin);
   if (booleanEmailLogin && booleanPasswordLogin) {
     document.location.href = "http://127.0.0.1:5500";
+    localStorage.setItem("isLogin", "true");
   } else {
+    localStorage.removeItem("isLogin");
     document.querySelector(".notification").innerHTML =
       "<i class='bx bx-error-circle'></i> Email hoặc mật khẩu không chính xác";
     document.querySelector(".notification").style.color = "red";
@@ -41,6 +43,7 @@ function checkLo(emailLogin, passwordLogin) {
       booleanPasswordLogin = false;
     }
     if (booleanEmailLogin == true && booleanPasswordLogin == true) {
+      localStorage.setItem("loggedInAccountIndex", i);
       break;
     }
   }

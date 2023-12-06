@@ -151,8 +151,8 @@
                   >
                     <i class="fa-solid fa-circle-user"></i>
                     <div class="header__item-body d-flex flex-column">
-                      <a href="">Đăng nhập</a>
-                      <a href="">Đăng ký</a>
+                      <a href="./views/web/login.html">Đăng nhập</a>
+                      <a href="./views/web/register.html">Đăng ký</a>
                     </div>
                   </li>
 
@@ -1463,8 +1463,8 @@
           >
             <i class="fa-solid fa-circle-user"></i>
             <div class="header__item-body d-flex flex-column">
-              <a href="">Đăng nhập</a>
-              <a href="">Đăng ký</a>
+              <a href="./views/web/login.html">Đăng nhập</a>
+              <a href="./views/web/register.html">Đăng ký</a>
             </div>
           </div>
 
@@ -1592,63 +1592,63 @@
       let containerFruitList = document.querySelector(".listFruitList");
       let htmlsFruitList = newFruitList.map((product, index) => {
         return `
-        <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
-          index + 20
-        }>
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="./views/web/productDetailFruitList.html?id=${
-                      parseInt(index) + 1
-                    }">
-                      <img
-                        src="${product.srcImg}"
-                        alt="${product.name}"
-                      />
-                    </a>
-                  </div>
+              <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
+                index + 20
+              }>
+                      <div class="wrapper">
+                        <div class="product__img">
+                          <a href="./views/web/productDetailFruitList.html?id=${
+                            parseInt(index) + 1
+                          }">
+                            <img
+                              src="${product.srcImg}"
+                              alt="${product.name}"
+                            />
+                          </a>
+                        </div>
 
-                  <div class="product__details px-2 mt-3">
-                    <span class="line-clamp">${product.name}</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        ${(function (product) {
-                          var formattedNumber = new Intl.NumberFormat().format(
-                            product.price
-                          );
-                          return formattedNumber;
-                        })(product)}₫;
+                        <div class="product__details px-2 mt-3">
+                          <span class="line-clamp">${product.name}</span>
+                          <div class="product__price d-flex align-items-center">
+                            <div class="product__price-current me-1">
+                              ${(function (product) {
+                                var formattedNumber =
+                                  new Intl.NumberFormat().format(product.price);
+                                return formattedNumber;
+                              })(product)}₫;
+                            </div>
+                            <div class="product__price-old me-1">${(function (
+                              product
+                            ) {
+                              var formattedNumber =
+                                new Intl.NumberFormat().format(
+                                  product.price + (product.price * 1) / 10
+                                );
+                              return formattedNumber;
+                            })(product)}&#8363;</div>
+                            <div class="product__price-off px-1">- 10%</div>
+                          </div>
+                        </div>
+
+                        <div class="product__badge p-2">
+                          <img src="/assets/img/label_1.webp" alt="" />
+                        </div>
                       </div>
-                      <div class="product__price-old me-1">${(function (
-                        product
-                      ) {
-                        var formattedNumber = new Intl.NumberFormat().format(
-                          product.price + (product.price * 1) / 10
-                        );
-                        return formattedNumber;
-                      })(product)}&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-        `;
+                    </li>
+              `;
       });
       containerFruitList.innerHTML =
         `
-      <li class="product__list-item col-md-4-8 col-12 mb-3">
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="">
-                      <img src="/assets/img/banners/section_hot.webp" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-      ` + htmlsFruitList.join(" ");
+            <li class="product__list-item col-md-4-8 col-12 mb-3">
+                      <div class="wrapper">
+                        <div class="product__img">
+                          <a href="">
+                            <img src="/assets/img/banners/section_hot.webp" alt="" />
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+            ` + htmlsFruitList.join(" ");
 
       // Render HotDealList
       let newHotDealList = hotDealFruits.slice(0, 10);
@@ -1656,48 +1656,48 @@
       let containerHotDealList = document.querySelector(".listHotDealList");
       let htmlsHotDealList = newHotDealList.map((product, index) => {
         return `
-        <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${index}>
-                <div class="wrapper">
-                  <div class="product__img">
-                    <a href="./views/web/productDetailHotDeal.html?id=${
-                      parseInt(index) + 1
-                    }">
-                      <img
-                        src="${product.srcImg}"
-                        alt="${product.name}"
-                      />
-                    </a>
-                  </div>
+              <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${index}>
+                      <div class="wrapper">
+                        <div class="product__img">
+                          <a href="./views/web/productDetailHotDeal.html?id=${
+                            parseInt(index) + 1
+                          }">
+                            <img
+                              src="${product.srcImg}"
+                              alt="${product.name}"
+                            />
+                          </a>
+                        </div>
 
-                  <div class="product__details px-2 mt-3">
-                    <span class="line-clamp">${product.name}</span>
-                    <div class="product__price d-flex align-items-center">
-                      <div class="product__price-current me-1">
-                        ${(function (product) {
-                          var formattedNumber = new Intl.NumberFormat().format(
-                            product.price
-                          );
-                          return formattedNumber;
-                        })(product)}₫;
+                        <div class="product__details px-2 mt-3">
+                          <span class="line-clamp">${product.name}</span>
+                          <div class="product__price d-flex align-items-center">
+                            <div class="product__price-current me-1">
+                              ${(function (product) {
+                                var formattedNumber =
+                                  new Intl.NumberFormat().format(product.price);
+                                return formattedNumber;
+                              })(product)}₫;
+                            </div>
+                            <div class="product__price-old me-1">${(function (
+                              product
+                            ) {
+                              var formattedNumber =
+                                new Intl.NumberFormat().format(
+                                  product.price + (product.price * 1) / 10
+                                );
+                              return formattedNumber;
+                            })(product)}&#8363;</div>
+                            <div class="product__price-off px-1">- 10%</div>
+                          </div>
+                        </div>
+
+                        <div class="product__badge p-2">
+                          <img src="/assets/img/label_1.webp" alt="" />
+                        </div>
                       </div>
-                      <div class="product__price-old me-1">${(function (
-                        product
-                      ) {
-                        var formattedNumber = new Intl.NumberFormat().format(
-                          product.price + (product.price * 1) / 10
-                        );
-                        return formattedNumber;
-                      })(product)}&#8363;</div>
-                      <div class="product__price-off px-1">- 10%</div>
-                    </div>
-                  </div>
-
-                  <div class="product__badge p-2">
-                    <img src="/assets/img/label_1.webp" alt="" />
-                  </div>
-                </div>
-              </li>
-        `;
+                    </li>
+              `;
       });
       containerHotDealList.innerHTML = htmlsHotDealList.join(" ");
 
@@ -1709,64 +1709,66 @@
       let containerForeignList = document.querySelector(".listForeignList");
       let htmlsForeignList = newForeignList.map((product, index) => {
         return `
-  <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
-    index + 10
-  }>
-          <div class="wrapper">
-            <div class="product__img">
-              <a href="./views/web/productDetailForeignList.html?id=${
-                parseInt(index) + 1
-              }">
-                <img
-                  src="${product.srcImg}"
-                  alt="${product.name}"
-                />
-              </a>
-            </div>
+        <li class="product__list-item product__list-position col-md-2-4 col-4 mb-3" data-position=${
+          index + 10
+        }>
+                <div class="wrapper">
+                  <div class="product__img">
+                    <a href="./views/web/productDetailForeignList.html?id=${
+                      parseInt(index) + 1
+                    }">
+                      <img
+                        src="${product.srcImg}"
+                        alt="${product.name}"
+                      />
+                    </a>
+                  </div>
 
-            <div class="product__details px-2 mt-3">
-              <span class="line-clamp">${product.name}</span>
-              <div class="product__price d-flex align-items-center">
-                <div class="product__price-current me-1">
-                  ${(function (product) {
-                    var formattedNumber = new Intl.NumberFormat().format(
-                      product.price
-                    );
-                    return formattedNumber;
-                  })(product)}₫;
+                  <div class="product__details px-2 mt-3">
+                    <span class="line-clamp">${product.name}</span>
+                    <div class="product__price d-flex align-items-center">
+                      <div class="product__price-current me-1">
+                        ${(function (product) {
+                          var formattedNumber = new Intl.NumberFormat().format(
+                            product.price
+                          );
+                          return formattedNumber;
+                        })(product)}₫;
+                      </div>
+                      <div class="product__price-old me-1">${(function (
+                        product
+                      ) {
+                        var formattedNumber = new Intl.NumberFormat().format(
+                          product.price + (product.price * 1) / 10
+                        );
+                        return formattedNumber;
+                      })(product)}&#8363;</div>
+                      <div class="product__price-off px-1">- 10%</div>
+                    </div>
+                  </div>
+
+                  <div class="product__badge p-2">
+                    <img src="/assets/img/label_1.webp" alt="" />
+                  </div>
                 </div>
-                <div class="product__price-old me-1">${(function (product) {
-                  var formattedNumber = new Intl.NumberFormat().format(
-                    product.price + (product.price * 1) / 10
-                  );
-                  return formattedNumber;
-                })(product)}&#8363;</div>
-                <div class="product__price-off px-1">- 10%</div>
-              </div>
-            </div>
-
-            <div class="product__badge p-2">
-              <img src="/assets/img/label_1.webp" alt="" />
-            </div>
-          </div>
-        </li>
-  `;
+              </li>
+        `;
       });
       containerForeignList.innerHTML =
         `
-  <li class="product__list-item col-md-4-8 col-12 mb-3">
-          <div class="wrapper">
-            <div class="product__img">
-              <a href="">
-                <img
-                  src="/assets/img/banners/section_pro_banner.webp"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </li>
-` + htmlsForeignList.join(" ");
+        <li class="product__list-item col-md-4-8 col-12 mb-3">
+                <div class="wrapper">
+                  <div class="product__img">
+                    <a href="">
+                      <img
+                        src="/assets/img/banners/section_pro_banner.webp"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+              </li>
+      ` + htmlsForeignList.join(" ");
 
       // Change Page
       var allProducts = document.querySelectorAll(".product__list-position");
@@ -1801,6 +1803,42 @@
         });
         cartQuantity.innerHTML = cartQuantityValue;
       });
+
+      // Login / Logout
+      document.addEventListener("DOMContentLoaded", () => {
+        let boxUser = document.querySelector(
+          "li.header__item.d-none.d-md-flex.d-none.align-items-center.me-4"
+        );
+        let loggedInAccountIndex = JSON.parse(
+          localStorage.getItem("loggedInAccountIndex")
+        );
+        let UserInfo = JSON.parse(localStorage.getItem("UsersInfo"));
+        let isLogin = JSON.parse(localStorage.getItem("isLogin"));
+
+        if (isLogin) {
+          boxUser.innerHTML = "";
+          boxUser.innerHTML = `<i class="fa-solid fa-circle-user"></i>
+                          <div class="header__item-body d-flex flex-column">
+                            <a href="#!">Chào, ${UserInfo[loggedInAccountIndex].firstNameUser}</a>
+                            <a href="/" class="btn-logOut">Đăng xuất</a>
+                          </div>`;
+          logOut();
+        } else {
+          boxUser.innerHTML = `<i class="fa-solid fa-circle-user"></i>
+                          <div class="header__item-body d-flex flex-column">
+                            <a href="./views/web/login.html">Đăng nhập</a>
+                            <a href="./views/web/register.html">Đăng ký</a>
+                          </div>`;
+        }
+      });
+
+      function logOut() {
+        let btnLogOut = document.querySelector("a.btn-logOut");
+        btnLogOut.addEventListener("click", () => {
+          localStorage.removeItem("isLogin");
+        });
+      }
+
       var menubar_icon = document.getElementById("menubar-icon");
       menubar_icon.addEventListener("click", openMenubar);
 
