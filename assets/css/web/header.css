@@ -24,6 +24,7 @@
 }
 
 .header__menubar-popup {
+    z-index: 1;
     position: absolute;
     background-color: var(--white-color);
     display: none;
