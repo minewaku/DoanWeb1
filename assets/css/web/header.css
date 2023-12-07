@@ -1,281 +1,269 @@
 .header {
-    background-color: var(--white-color);
+  background-color: var(--white-color);
 }
 
 .mainheader {
-
 }
 
 .subheader {
-    font-size: 24px;
-    position: relative;
+  font-size: 24px;
+  position: relative;
 }
 
 .subheader__item {
-    width: fit-content;
+  width: fit-content;
 }
 
 .subheader__item:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .subheader__item:hover .header__menubar-popup {
-    display: block;
+  display: block;
 }
 
 .header__menubar-popup {
-    z-index: 1;
-    position: absolute;
-    background-color: var(--white-color);
-    display: none;
-    top: 34px;
+  z-index: 1;
+  position: absolute;
+  background-color: var(--white-color);
+  display: none;
+  top: 34px;
 }
 
 .subheader span {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .header__logo {
-    width: 140px;
+  width: 140px;
 }
 
 .header__logo--img {
-
 }
 
 .header__searchbar {
-    border-radius: 4px;
-    height: 40px;
+  border-radius: 4px;
+  height: 40px;
 }
 
 .header__searchbar input {
-    border-radius: 4px 0 0 4px;
-    color: var(--text-color);
-    background-color: var(--gray-color);
-    border: none;
-    font-size: 16px;
+  border-radius: 4px 0 0 4px;
+  color: var(--text-color);
+  background-color: var(--gray-color);
+  border: none;
+  font-size: 16px;
 }
 
 .header__searchbar-icon {
-    border-radius: 0 4px 4px 0;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    min-width: 40px;
-    min-height: 40px;
+  border-radius: 0 4px 4px 0;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .header__searchbar-icon svg {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .header__item {
-
 }
 
 .header__item svg {
-    font-size: 32px;
-    color: var(--primary-color);
-    margin-right: 16px;
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-right: 16px;
 }
 
 .header__item-body {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .header__item-body span {
-
 }
 
 .header__item-body a {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .location {
-
 }
 
 .location:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cart {
-    position: relative;
+  position: relative;
 }
 
 .cart:hover::after {
-    z-index: 1;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 32px;
-    right: -24px;
-    height: 32px;
-    width: 120px;
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 32px;
+  right: -24px;
+  height: 32px;
+  width: 120px;
 }
 
 .cart:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cart:hover .cart__content {
-    display: block;
+  display: block;
 }
 
 .cart__content {
-    z-index: 1;
-    display: none;
-    position: absolute;
-    top: 58px;
-    right: -36px;
-    width: 400px;
-    background-color: var(--white-color);
-    border-radius: 12px;
-    box-shadow: 0px 0px 4px #dadadada;
-    border: 1px solid #dadadada;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 58px;
+  right: -36px;
+  width: 400px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px #dadadada;
+  border: 1px solid #dadadada;
 }
 
 .cart__content-title {
-    display: none;
+  display: none;
 }
 
 .cart__content-list {
-
 }
 
 .cart__content-item {
-    height: 92px;
-    border-bottom: 1px solid #dadada;
+  height: 92px;
+  border-bottom: 1px solid #dadada;
 }
 
 .content__item-img {
-    height: 62px;
-    width: 62px;
+  height: 62px;
+  width: 62px;
 }
 
 .content__item-img img {
-    height: 62px;
-    width: 62px;
-    object-fit: cover;
+  height: 62px;
+  width: 62px;
+  object-fit: cover;
 }
 
 .content__item-details {
-    width: 100%;
+  width: 100%;
 }
 
 .content__item-name {
-   
 }
 
 .content__item-name a {
-    color: var(--black-color);
+  color: var(--black-color);
 }
 
 .content__item-quantity {
-
 }
 
 .cart__content-total {
-
 }
 
 .cart__content-delete {
-
 }
 
 .content__item-delete--btn {
-    
+  padding: 4px;
+  width: 20px;
 }
 
 .content__item-delete--btn svg {
-    font-size: 16px;
-    margin: 0px;
-    color: var(--black-color);
+  font-size: 16px;
+  margin: 0px;
+  color: var(--black-color);
 }
 
 .pay--btn {
-    background-color: var(--pay-btn-color);
-    color: var(--white-color);
-    border-radius: 4px;
+  background-color: var(--pay-btn-color);
+  color: var(--white-color);
+  border-radius: 4px;
 }
 
 .cart .cart__quantity {
-    position: absolute;
-    right: 6px;
-    top: -1px;
-    font-size: 14px;
-    border-radius: 50%;
-    background-color: var(--yellow-color);
-    height: 22px;
-    width: 22px;
-    color: var(--black-color);
+  position: absolute;
+  right: 6px;
+  top: -1px;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: var(--yellow-color);
+  height: 22px;
+  width: 22px;
+  color: var(--black-color);
 }
 
 .header__menubar {
-
 }
 
 .header__menubar-icon {
-    color: var(--primary-color);
-    font-size: 32px;
+  color: var(--primary-color);
+  font-size: 32px;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .modal__overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
 }
 
 .header__menubar-list {
-    z-index: 1;
-    background-color: var(--white-color);
-    height: 100%;
-    width: 320px;
+  z-index: 1;
+  background-color: var(--white-color);
+  height: 100%;
+  width: 320px;
 }
 
 .header__menubar-body {
-    width: 320px;
+  width: 320px;
 }
 
 .menubar__body-item {
-
 }
 
 .menubar__body-item:hover {
-    background-color: var(--light);
+  background-color: var(--light);
 }
 
 .menubar__item-left {
-
 }
 
 .menubar__item-left svg {
-    color: var(--yellow-color);
-    font-size: 20px;
+  color: var(--yellow-color);
+  font-size: 20px;
 }
 
 .menubar__item-left span {
-    color: var(--black-color);
-    font-size: 18px;
+  color: var(--black-color);
+  font-size: 18px;
 }
 
 .menubar__body-item > svg {
-    color: var(--black-color);
-    font-size: 20px;
+  color: var(--black-color);
+  font-size: 20px;
 }
 
 .header__menubar-footer {
-    height: 46px;
+  height: 46px;
 }
 
 .menubar__social {
-    color: var(--black-color);
+  color: var(--black-color);
 }
