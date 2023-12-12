@@ -2,15 +2,19 @@ const putOut = document.querySelector(".form-login .login .btn");
 
 let booleanEmailLogin = false;
 let booleanPasswordLogin = false;
+let acceptLogin = true;
 
 putOut.addEventListener("click", (e) => {
   e.preventDefault();
   const emailLogin = document.querySelector("#email");
   const passwordLogin = document.querySelector("#password");
   checkLo(emailLogin, passwordLogin);
-  if (booleanEmailLogin && booleanPasswordLogin) {
-    document.location.href = "http://127.0.0.1:5500";
+  if (booleanEmailLogin && booleanPasswordLogin && acceptLogin) {
+    // document.location.href = "http://127.0.0.1:5500";
+    alert("chuyen");
     localStorage.setItem("isLogin", "true");
+  } else if (acceptLogin == false) {
+    alert("Tài khoản của bạn không thể đăng nhập");
   } else {
     localStorage.removeItem("isLogin");
     document.querySelector(".notification").innerHTML =
@@ -42,8 +46,19 @@ function checkLo(emailLogin, passwordLogin) {
     } else {
       booleanPasswordLogin = false;
     }
-    if (booleanEmailLogin == true && booleanPasswordLogin == true) {
+    if (JSON.parse(localStorage.getItem("UsersInfo"))[i].acceptLogin === true) {
+      acceptLogin = true;
+    } else {
+      acceptLogin = false;
+      console.log(1);
+    }
+    if (
+      booleanEmailLogin == true &&
+      booleanPasswordLogin == true &&
+      acceptLogin == true
+    ) {
       localStorage.setItem("loggedInAccountIndex", i);
+      alert("Login");
       break;
     }
   }

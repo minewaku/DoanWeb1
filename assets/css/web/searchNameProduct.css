@@ -1,0 +1,14 @@
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.product-item {
+  width: 316px;
+}
+
+.pagination-row {
+  margin-left: 1264px;
+}

@@ -747,6 +747,197 @@
       <!-- end footer -->
     </div>
 
+    <!-- Modal Payment -->
+    <div class="modal-payment">
+      <div class="container-product--checkout">
+        <div class="info">
+          <form class="form">
+            <div class="section section-header">
+              <h2>Thông Tin Giao Nhận Hàng</h2>
+            </div>
+            <div class="section section-information">
+              <img
+                src="../../assets/img/Users/avatar2.png"
+                alt="ảnh người dùng"
+              />
+              <p>Khanh Nhu (khanhnhu2004bt@gmail.com)</p>
+            </div>
+            <div class="section section-address">
+              <label for="">
+                <span>Thêm địa chỉ mới</span>
+                <select name="" id="">
+                  <option value="">Địa chỉ đã lưu trữ</option>
+                  <option value="abc"></option>
+                </select>
+              </label>
+              <label for="name" id="label-name">
+                <span>Họ và tên</span>
+                <input type="text" id="name" autocapitalize="off" />
+              </label>
+              <label for="tel" id="label-tel">
+                <span>Điện thoại</span>
+                <input type="tel" id="tel" autocapitalize="off" />
+              </label>
+
+              <label for="address" id="label-address">
+                <span>Địa chỉ</span>
+                <input type="text" id="address" autocapitalize="off" />
+              </label>
+              <div class="column3">
+                <label for="tinh" id="label-tinh">
+                  <span>Tỉnh/ Thành phố</span>
+                  <select name="" id="city">
+                    <option value="" selected>Chọn tỉnh/ thành phố</option>
+                  </select>
+                </label>
+                <label for="" id="label-name">
+                  <span>Quận</span>
+                  <select name="" id="district">
+                    <option value="000" selected>Chọn quận</option>
+                  </select>
+                </label>
+                <label for="" id="">
+                  <span>Phường</span>
+                  <select name="" id="ward">
+                    <option value="" selected>Chọn phường</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <!-- section section-address -->
+            <div class="section">
+              <p>
+                Vận chuyển từ: 204 Nơ Trang Long, Phường 12, Quận Bình Thạnh,
+                TP.HCM
+              </p>
+              <div class="not-district">
+                <p>Vui lòng chọn quận / huyện để biết được phí vận chuyển</p>
+              </div>
+              <div class="has-district hidden">
+                <p>Quan nay phi van chuyen la:</p>
+                <span>200000k</span>
+              </div>
+            </div>
+            <div class="section">
+              <p>Chọn phương thức thanh toán</p>
+              <div class="delivery--radio">
+                <div class="top">
+                  <input type="radio" name="chose" id="" value="cod" />
+                  <img
+                    src="https://hstatic.net/0/0/global/design/seller/image/payment/cod.svg?v=6"
+                    alt=""
+                  />
+                  <p class="desc">Thanh toán khi giao hàng (COD)</p>
+                </div>
+                <div class="mid">
+                  <p>
+                    Cảm ơn bạn đã lựa chọn mua sắm tại Farmers' Market,<br />
+                    Nhân viên của chúng tôi sẽ sớm liên lạc với bạn qua điện
+                    thoại để<br />
+                    XÁC NHẬN ĐƠN HÀNG <br />
+                    trước khi giao hàng!
+                  </p>
+                </div>
+                <div class="under">
+                  <input type="radio" name="chose" id="" value="banking" />
+                  <img
+                    src="https://hstatic.net/0/0/global/design/seller/image/payment/other.svg?v=6"
+                    alt=""
+                  />
+                  <p class="desc">Chuyển khoản qua ngân hàng</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <a href="">Giỏ hàng</a>
+              <input
+                type="submit"
+                class="submitOrder"
+                value="Hoàn tất đặt hàng"
+              />
+            </div>
+          </form>
+        </div>
+        <!-- info -->
+        <div class="product-checkout">
+          <div class="product-in-cart">
+            <!-- item 1 -->
+          </div>
+          <div class="block-discount">
+            <input
+              type="text"
+              class="discount-code"
+              placeholder="Mã giảm giá"
+            />
+            <button class="enter-discount">Nhập</button>
+          </div>
+          <div class="total-price">
+            <div class="total-products space-between">
+              <p>Tổng tiền hàng</p>
+              <span class="total">405,300₫</span>
+            </div>
+            <div class="ship-fee space-between">
+              <p>Phí giao hàng</p>
+              <span class="total">----</span>
+            </div>
+          </div>
+          <div class="final-price space-between">
+            <p>Tổng thanh toán</p>
+            <span class="total">405,300₫</span>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+      <script>
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("district");
+        var wards = document.getElementById("ward");
+        var Parameter = {
+          url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+          method: "GET",
+          responseType: "application/json",
+        };
+        var promise = axios(Parameter);
+        promise.then(function (result) {
+          renderCity(result.data);
+        });
+
+        function renderCity(data) {
+          for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Id);
+          }
+          citis.onchange = function () {
+            district.length = 1;
+            ward.length = 1;
+            if (this.value != "") {
+              const result = data.filter((n) => n.Id === this.value);
+
+              for (const k of result[0].Districts) {
+                district.options[district.options.length] = new Option(
+                  k.Name,
+                  k.Id
+                );
+              }
+            }
+          };
+          district.onchange = function () {
+            ward.length = 1;
+            const dataCity = data.filter((n) => n.Id === citis.value);
+            if (this.value != "") {
+              const dataWards = dataCity[0].Districts.filter(
+                (n) => n.Id === this.value
+              )[0].Wards;
+
+              for (const w of dataWards) {
+                wards.options[wards.options.length] = new Option(w.Name, w.Id);
+              }
+            }
+          };
+        }
+      </script>
+    </div>
+
     <!-- menubar modal -->
     <div class="modal" id="menubar-list">
       <div class="modal__overlay" id="modal-overlay">

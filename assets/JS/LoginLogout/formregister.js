@@ -1,5 +1,4 @@
 let Users = JSON.parse(localStorage.getItem("UsersInfo"));
-console.log(Users);
 if (Users === null) {
   Users = [
     {
@@ -9,6 +8,7 @@ if (Users === null) {
       emailUser: "admin@gmail.com",
       passwordUser: "123456789",
       confirmUser: "123456789",
+      acceptLogin: true,
     },
   ];
   localStorage.setItem("UsersInfo", JSON.stringify(Users));
@@ -38,6 +38,7 @@ save.addEventListener("click", (e) => {
       emailUser: email.value,
       passwordUser: password.value,
       confirmUser: confirm.value,
+      acceptLogin: true,
     });
     localStorage.setItem("UsersInfo", JSON.stringify(Users));
     alert("ĐĂNG KÝ THÀNH CÔNG");
@@ -50,6 +51,7 @@ let booleanPhone = false;
 let booleanEmail = false;
 let booleanPassword = false;
 let booleanConfirm = false;
+
 let checkFirstname = () => {
   if (firstName.value === "") {
     firstName.style.border = "1px solid red";
@@ -132,14 +134,31 @@ let checkPhone = () => {
     document.querySelector(".check-phone").style.color = "red";
     booleanPhone = false;
   } else {
-    phone.style.border = "1px solid green";
-    document.querySelector(".check-phone").innerHTML =
-      "<i class='bx bx-check-circle' ></i>";
-    document.querySelector(".check-phone").style.color = "green";
-    document.querySelector(".phone-error").innerHTML =
-      "<i class='bx bx-like' ></i> Hợp lý";
-    document.querySelector(".phone-error").style.color = "green";
-    booleanPhone = true;
+    let unitPhone = false;
+    Users.forEach((element) => {
+      if (element.phoneUser === phone.value) {
+        unitPhone = true;
+      }
+    });
+    if (unitPhone) {
+      phone.style.border = "1px solid red";
+      document.querySelector(".phone-error").style.color = "red";
+      document.querySelector(".phone-error").innerHTML =
+        "<i class='bx bx-error-circle'></i> Số điện thoại đẫ tồn tại trên hệ thống! ";
+      document.querySelector(".check-phone").innerHTML =
+        "<i class='bx bx-error-circle'></i>";
+      document.querySelector(".check-phone").style.color = "red";
+      booleanPhone = false;
+    } else {
+      phone.style.border = "1px solid green";
+      document.querySelector(".check-phone").innerHTML =
+        "<i class='bx bx-check-circle' ></i>";
+      document.querySelector(".check-phone").style.color = "green";
+      document.querySelector(".phone-error").innerHTML =
+        "<i class='bx bx-like' ></i> Hợp lý";
+      document.querySelector(".phone-error").style.color = "green";
+      booleanPhone = true;
+    }
   }
 };
 

@@ -15,15 +15,14 @@
     />
 
     <!-- Css -->
-    <!-- <link rel="stylesheet" href="/assets/css/reset.css"/> -->
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/web/mainpage.css" />
-    <link rel="stylesheet" href="/assets/css/web/header.css" />
-    <link rel="stylesheet" href="/assets/css/web/footer.css" />
-    <link rel="stylesheet" href="/assets/css/web/contact.css" />
-    <link rel="stylesheet" href="../../assets/css/web/LoginLogout/infomation.css" />
-
-    <!-- Js -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/web/mainpage.css" />
+    <link rel="stylesheet" href="../../assets/css/web/header.css" />
+    <link rel="stylesheet" href="../../assets/css/web/more-product.css" />
+    <link rel="stylesheet" href="../../assets/responsive/more-product.css" />
+    <link rel="stylesheet" href="../../assets/css/web/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/web/searchNameProduct.css" />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -99,11 +98,11 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>Tài khoản của bạn</title>
+    <title>Trái cây nhập - Farmers Market</title>
   </head>
   <body>
-    <div class="container-fluid p-0">
-      <!-- start header -->
+    <div class="container-fluid g-0">
+      <!-- header -->
       <div class="header">
         <div class="container">
           <div class="mainheader">
@@ -123,7 +122,7 @@
                 <form method="get" class="header__searchbar w-100 d-flex">
                   <input
                     type="text"
-                    class="ps-2 w-100"
+                    class="ps-2 w-100 search-name-product"
                     placeholder="Tìm kiếm sản phẩm"
                   />
                   <span
@@ -165,7 +164,7 @@
                   </li>
 
                   <li class="header__item cart d-flex align-items-center">
-                    <a href="">
+                    <a href="../web/cart.html">
                       <i class="fa-solid fa-bag-shopping"></i>
                       <span
                         class="cart__quantity d-flex justify-content-center align-items-center"
@@ -437,69 +436,36 @@
 
       <!-- start body -->
       <div class="body">
-        <div class="breadcrumb">
-          <div class="container">
-            <div class="breadcrumb--desc">
+        <div class="wrap">
+          <div class="breadcrumb">
+            <div class="breadcrmb-content">
               <p>Trang chủ</p>
-              <p>/ Tài khoản</p>
+              <p>/ Tìm Kiếm</p>
+            </div>
+          </div>
+          <div class="container-product">
+            <div class="product-show">
+              <h3 class="name-heading">Tất cả sản phẩm ở dưới</h3>
+              <div class="product-container">
+                <!-- product-item -->
+                <div class="product-item">
+                  <div class="box-img">
+                    <img
+                      src="../../assets/img/product/xoai.jpg"
+                      alt="Xoài giống Úc - 800G/Trái"
+                      class="product-img"
+                    />
+                  </div>
+                  <p class="product-name">Xoài giống Úc - 800G/Trái</p>
+                  <p class="product-price">59,200₫</p>
+                </div>
+              </div>
+              <div class="pagination-row">
+                <ul class="page-list"></ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="container w-100 b-2">
-          <div class="row h-100 w-100">
-              <div class="col-4 h-100 br-2">
-                  <p class="font mgb-7">Trang tài khoản</p>
-                  <p class="font-14 mgb-28">Xin chào, <span style="color: #12487f;" class="username"></span></p>
-                  <ul class="mgb-28">
-                      <li class="mgb-28"><a href="http://127.0.0.1:5500/DoAnWeb-main/views/web/Information.html" class="font-14 text-black">Thông tin tài khoản</a></li>
-                      <li class="logout"><a href="http://127.0.0.1:5500/DoAnWeb-main/views/web/login.html" class="font-16 text-black">Đăng xuất</a></li>
-                  </ul>
-              </div>
-              <div class="col-sm-8 col-12 h-100 mt-3">
-                  <p class="font mgb-16">Tài khoản</p>
-                  <p class="font-14 mgb-16">Tên tài khoản : <span id="username"></span></p>
-                  <div class="font-14 mgb-16"><i class='bx bxs-home' style="color: #12487f;"></i> Địa chỉ : Vietnam</div>
-                  <div class="font-14 mgb-16"><i class='bx bxs-phone' style="color: #12487f;"></i> Điện thoại : <span class="phoneuser"></span></div>
-                  <p class="font mgb-16">Đơn hàng của bạn</p>
-                  <table class="appointment-history w-100 b-1 mgb-16">
-                    <tr>
-                      <th>Mã đơn hàng</th>
-                      <th>Ngày đặt</th>
-                      <th>Thành tiền</th>
-                      <th>TT thanh toán</th>
-                      <th>TT vận chuyển</th>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </table>
-              </div>
-          </div>
       </div>
       <!-- end body -->
 
@@ -748,67 +714,13 @@
       </div>
     </div>
 
-    <!-- contact -->
-    <div class="contact--fixed d-flex">
-      <ul class="contact__list d-flex align-items-center m-0" id="contact-list">
-        <li
-          class="contact__list-item message d-flex justify-content-center align-items-center me-2"
-        >
-          <a href="">
-            <i class="fa-brands fa-facebook-messenger"></i>
-          </a>
-        </li>
-
-        <li
-          class="contact__list-item phone d-flex justify-content-center align-items-center me-2"
-        >
-          <a href="">
-            <i class="fa-solid fa-phone"></i>
-          </a>
-        </li>
-
-        <li
-          class="contact__list-item email d-flex justify-content-center align-items-center me-2"
-        >
-          <a href="">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </li>
-      </ul>
-
-      <div
-        class="contact__button d-flex flex-column justify-content-center align-items-center"
-        id="contact-button"
-      >
-        <i class="fa-solid fa-message"></i>
-        <span>Hỗ trợ</span>
-      </div>
-    </div>
-
     <!-- Js -->
     <script>
-      let productsInCart = localStorage.getItem("products")
-        ? JSON.parse(localStorage.getItem("products"))
-        : [];
-      document.addEventListener(
-        "DOMContentLoaded",
-        function updateCartQuantity() {
-          var cartQuantity = document.querySelector(".cart__quantity");
-          var cartQuantityValue = 0;
-          productsInCart.forEach((item) => {
-            cartQuantityValue += item.soluong;
-          });
-          cartQuantity.innerHTML = cartQuantityValue;
-        }
-      );
       var menubar_icon = document.getElementById("menubar-icon");
       menubar_icon.addEventListener("click", openMenubar);
 
       var modal__overlay = document.getElementById("modal-overlay");
       modal__overlay.addEventListener("click", closeMenubar);
-
-      var contact__button = document.getElementById("contact-button");
-      contact__button.addEventListener("click", socialDisplay);
 
       function openMenubar() {
         var menubar_list = document.getElementById("menubar-list");
@@ -830,16 +742,6 @@
           menubar_list.style.display = "none";
         }
       }
-
-      function socialDisplay() {
-        var contact__list = document.getElementById("contact-list");
-
-        if (contact__list.classList.contains("open")) {
-          contact__list.classList.remove("open");
-        } else {
-          contact__list.classList.add("open");
-        }
-      }
     </script>
 
     <!-- Bootstrap -->
@@ -848,6 +750,6 @@
 
     <!-- Fontawsome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <script type="module" src="../../assets/JS/LoginLogout/infomation.js"></script>
+    <script type="module" src="../../assets/JS/searchNameProduct.js"></script>
   </body>
 </html>

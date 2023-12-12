@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard - FarmMarket</title>
+    <title>Products - FarmMarket</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -25,7 +25,7 @@
       href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
     />
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
   </head>
   <!--
 `body` tag options:
@@ -102,7 +102,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user1-128x128.jpg"
+                    src="../dist/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -126,7 +126,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user8-128x128.jpg"
+                    src="../dist/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -150,7 +150,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user3-128x128.jpg"
+                    src="../dist/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -218,9 +218,9 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="#!" class="brand-link">
+        <a href="index3.html" class="brand-link">
           <img
-            src="dist/img/AdminLTELogo.png"
+            src="../dist/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
@@ -234,7 +234,7 @@
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="dist/img/harry maguire.webp"
+                src="../dist/img/harry maguire.webp"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
@@ -272,25 +272,25 @@
               <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
               <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+                <a href="../index.html" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./pages/users.html" class="nav-link">
+                <a href="./users.html" class="nav-link">
                   <i class="fa-solid fa-users nav-icon"></i>
                   <p>Users</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./pages/orders.html" class="nav-link">
+                <a href="./orders.html" class="nav-link">
                   <i class="fa-solid fa-cube nav-icon"></i>
                   <p>Orders</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./pages/products.html" class="nav-link">
+                <a href="#!" class="nav-link active">
                   <i class="fa-brands fa-product-hunt nav-icon"></i>
                   <p>Products</p>
                 </a>
@@ -303,19 +303,19 @@
       </aside>
 
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="position: relative">
         <!-- Content Header (Page header) -->
         <div class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0">Products</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Dashboard</li>
+                  <li class="breadcrumb-item active">Products</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -327,256 +327,149 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-
         <div class="content">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header border-0">
-                    <div class="d-flex justify-content-between">
-                      <h3 class="card-title">Online Store Visitors</h3>
+              <div class="col-lg-12">
+                <!-- Card 1 -->
+                <div class="card-1">
+                  <div
+                    class="d-flex justify-content-md-end justify-content-center"
+                  >
+                    <button type="button" class="btn btn-secondary">
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="margin: 0 10px"
+                    >
+                      Add
+                    </button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                  <div
+                    class="card"
+                    style="transition: tranforms 2s; margin-bottom: 20px"
+                  >
+                    <div class="card-header border-0">
+                      <h3 class="card-title">Trái cây Việt</h3>
+                      <div class="card-tools">
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-download"></i>
+                        </a>
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                      <table
+                        class="table table-striped table-valign-middle fruit-list"
+                      ></table>
+                    </div>
+                    <div
+                      class="btn btn-default btn-viewmore"
+                      data-list="fruit-list"
+                      style="width: 200px; margin-left: calc(50% - 100px)"
+                    >
+                      View more...
                     </div>
                   </div>
-                  <div class="card-body">
-                    <div class="d-flex">
-                      <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">820</span>
-                        <span>Visitors Over Time</span>
-                      </p>
-                      <p class="ml-auto d-flex flex-column text-right">
-                        <span class="text-success">
-                          <i class="fas fa-arrow-up"></i> 12.5%
-                        </span>
-                        <span class="text-muted">Since last week</span>
-                      </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-1">
+                  <div
+                    class="d-flex justify-content-md-end justify-content-center"
+                  >
+                    <button type="button" class="btn btn-secondary">
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="margin: 0 10px"
+                    >
+                      Add
+                    </button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                  <div
+                    class="card"
+                    style="transition: tranforms 2s; margin-bottom: 20px"
+                  >
+                    <div class="card-header border-0">
+                      <h3 class="card-title">Trái cây nhập</h3>
+                      <div class="card-tools">
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-download"></i>
+                        </a>
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                      </div>
                     </div>
-                    <!-- /.d-flex -->
-
-                    <div class="position-relative mb-4">
-                      <canvas id="visitors-chart" height="200"></canvas>
+                    <div class="card-body table-responsive p-0">
+                      <table
+                        class="table table-striped table-valign-middle foreign-list"
+                      ></table>
                     </div>
-
-                    <div class="d-flex flex-row justify-content-end">
-                      <span class="mr-2">
-                        <i class="fas fa-square text-primary"></i> This Week
-                      </span>
-
-                      <span>
-                        <i class="fas fa-square text-gray"></i> Last Week
-                      </span>
+                    <div
+                      class="btn btn-default btn-viewmore"
+                      data-list="foreign-list"
+                      style="width: 200px; margin-left: calc(50% - 100px)"
+                    >
+                      View more...
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-1">
+                  <div
+                    class="d-flex justify-content-md-end justify-content-center"
+                  >
+                    <button type="button" class="btn btn-secondary">
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="margin: 0 10px"
+                    >
+                      Add
+                    </button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                  <div
+                    class="card"
+                    style="transition: tranforms 2s; margin-bottom: 20px"
+                  >
+                    <div class="card-header border-0">
+                      <h3 class="card-title">Trái cây đang sale</h3>
+                      <div class="card-tools">
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-download"></i>
+                        </a>
+                        <a href="#" class="btn btn-tool btn-sm">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                      <table
+                        class="table table-striped table-valign-middle hot-deal"
+                      ></table>
+                    </div>
+                    <div
+                      class="btn btn-default btn-viewmore"
+                      data-list="hot-deal"
+                      style="width: 200px; margin-left: calc(50% - 100px)"
+                    >
+                      View more...
                     </div>
                   </div>
                 </div>
                 <!-- /.card -->
-
-                <div class="card">
-                  <div class="card-header border-0">
-                    <h3 class="card-title">Products</h3>
-                  </div>
-                  <div class="card-body table-responsive p-0">
-                    <table
-                      class="table table-striped table-valign-middle dashboard"
-                    >
-                      <thead>
-                        <tr>
-                          <th>Product</th>
-                          <th>Price</th>
-                          <th>Sales</th>
-                          <th>More</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <img
-                              src="dist/img/default-150x150.png"
-                              alt="Product 1"
-                              class="img-circle img-size-32 mr-2"
-                            />
-                            Some Product
-                          </td>
-                          <td>$13 USD</td>
-                          <td>
-                            <small class="text-success mr-1">
-                              <i class="fas fa-arrow-up"></i>
-                              12%
-                            </small>
-                            12,000 Sold
-                          </td>
-                          <td>
-                            <a href="#" class="text-muted">
-                              <i class="fas fa-search"></i>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img
-                              src="dist/img/default-150x150.png"
-                              alt="Product 1"
-                              class="img-circle img-size-32 mr-2"
-                            />
-                            Another Product
-                          </td>
-                          <td>$29 USD</td>
-                          <td>
-                            <small class="text-warning mr-1">
-                              <i class="fas fa-arrow-down"></i>
-                              0.5%
-                            </small>
-                            123,234 Sold
-                          </td>
-                          <td>
-                            <a href="#" class="text-muted">
-                              <i class="fas fa-search"></i>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img
-                              src="dist/img/default-150x150.png"
-                              alt="Product 1"
-                              class="img-circle img-size-32 mr-2"
-                            />
-                            Amazing Product
-                          </td>
-                          <td>$1,230 USD</td>
-                          <td>
-                            <small class="text-danger mr-1">
-                              <i class="fas fa-arrow-down"></i>
-                              3%
-                            </small>
-                            198 Sold
-                          </td>
-                          <td>
-                            <a href="#" class="text-muted">
-                              <i class="fas fa-search"></i>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img
-                              src="dist/img/default-150x150.png"
-                              alt="Product 1"
-                              class="img-circle img-size-32 mr-2"
-                            />
-                            Perfect Item
-                          </td>
-                          <td>$199 USD</td>
-                          <td>
-                            <small class="text-success mr-1">
-                              <i class="fas fa-arrow-up"></i>
-                              63%
-                            </small>
-                            87 Sold
-                          </td>
-                          <td>
-                            <a href="#" class="text-muted">
-                              <i class="fas fa-search"></i>
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <!-- /.card -->
-              </div>
-              <!-- /.col-md-6 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header border-0">
-                    <div class="d-flex justify-content-between">
-                      <h3 class="card-title">Sales</h3>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="d-flex">
-                      <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">$18,230.00</span>
-                        <span>Sales Over Time</span>
-                      </p>
-                      <p class="ml-auto d-flex flex-column text-right">
-                        <span class="text-success">
-                          <i class="fas fa-arrow-up"></i> 33.1%
-                        </span>
-                        <span class="text-muted">Since last month</span>
-                      </p>
-                    </div>
-                    <!-- /.d-flex -->
-
-                    <div class="position-relative mb-4">
-                      <canvas id="sales-chart" height="200"></canvas>
-                    </div>
-
-                    <div class="d-flex flex-row justify-content-end">
-                      <span class="mr-2">
-                        <i class="fas fa-square text-primary"></i> This year
-                      </span>
-
-                      <span>
-                        <i class="fas fa-square text-gray"></i> Last year
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card -->
-
-                <div class="card">
-                  <div class="card-header border-0">
-                    <h3 class="card-title">Online Store Overview</h3>
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center border-bottom mb-3"
-                    >
-                      <p class="text-success text-xl">
-                        <i class="ion ion-ios-refresh-empty"></i>
-                      </p>
-                      <p class="d-flex flex-column text-right">
-                        <span class="font-weight-bold">
-                          <i class="ion ion-android-arrow-up text-success"></i>
-                          12%
-                        </span>
-                        <span class="text-muted">CONVERSION RATE</span>
-                      </p>
-                    </div>
-                    <!-- /.d-flex -->
-                    <div
-                      class="d-flex justify-content-between align-items-center border-bottom mb-3"
-                    >
-                      <p class="text-warning text-xl">
-                        <i class="ion ion-ios-cart-outline"></i>
-                      </p>
-                      <p class="d-flex flex-column text-right">
-                        <span class="font-weight-bold">
-                          <i class="ion ion-android-arrow-up text-warning"></i>
-                          0.8%
-                        </span>
-                        <span class="text-muted">SALES RATE</span>
-                      </p>
-                    </div>
-                    <!-- /.d-flex -->
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-0"
-                    >
-                      <p class="text-danger text-xl">
-                        <i class="ion ion-ios-people-outline"></i>
-                      </p>
-                      <p class="d-flex flex-column text-right">
-                        <span class="font-weight-bold">
-                          <i class="ion ion-android-arrow-down text-danger"></i>
-                          1%
-                        </span>
-                        <span class="text-muted">REGISTRATION RATE</span>
-                      </p>
-                    </div>
-                    <!-- /.d-flex -->
-                  </div>
-                </div>
               </div>
               <!-- /.col-md-6 -->
             </div>
@@ -584,6 +477,183 @@
           </div>
           <!-- /.container-fluid -->
         </div>
+        <div
+          class="modal-add-product"
+          style="
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 80px 0 0 0;
+            display: none;
+          "
+        >
+          <div
+            class="card card-success col-md-9"
+            style="margin: auto; padding: 0"
+          >
+            <div class="card-header">
+              <h3 class="card-title">Thêm sản phẩm mới</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="product-name">Tên sản phẩm</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-name"
+                    placeholder="Nhập tên sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="quycach">Bán theo quy cách nào</label>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      checked=""
+                      value="kg"
+                    />
+                    <label class="quycach">Ki-lô-gram</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="trai" />
+                    <label class="quycach">Quả</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="product-price">Giá mỗi sản phẩm(Kg/Quả)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-price"
+                    placeholder="Nhập giá sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-quantity">Số lượng</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-quantity"
+                    placeholder="Nhập số lượng vào kho"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-desc">Nhập mô tả cho sản phẩm</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    id="product-desc"
+                    placeholder="Enter description..."
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      id="customFile"
+                      accept="image/png, image/jpeg"
+                    />
+                    <label class="custom-file-label" for="customFile"
+                      >Choose file</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-success card-footer">
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Modal delete product -->
+        <div
+          class="modal-delete-product"
+          style="
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 80px 0 0 0;
+            display: none;
+          "
+        >
+          <div
+            class="card card-success col-md-9"
+            style="margin: auto; padding: 0"
+          >
+            <div class="card-header">
+              <h3 class="card-title">Tìm sản phẩm cần xóa</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="product-name">Tên sản phẩm</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-name"
+                    placeholder="Nhập tên sản phẩm"
+                  />
+                </div>
+                <div class="result-search">Khoong cos</div>
+
+                <div class="card-success card-footer">
+                  <button class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="modal-child-delete"
+          style="position: absolute; top: 200px; width: 100%; display: none"
+        >
+          <div class="modal-content col-3" style="margin: 0 auto">
+            <div class="modal-header">
+              <h5 class="modal-title">Đang xóa sản phẩm</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Bạn xác nhận xóa sản phẩm này?</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-danger">Yes</button>
+            </div>
+          </div>
+        </div>
+
         <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
@@ -602,20 +672,16 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
-    <script src="dist/js/adminlte.js"></script>
-    <script src="plugins/chart.js/Chart.min.js"></script>
+    <script src="../dist/js/adminlte.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="../dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script
-      src="https://static.elfsight.com/platform/platform.js"
-      data-use-service-core
-      defer
-    ></script>
-    <script src="dist/js/pages/dashboard3.js"></script>
+    <script src="../dist/js/pages/products.js"></script>
   </body>
 </html>

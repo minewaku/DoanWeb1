@@ -1585,6 +1585,9 @@
       import fruitList from "./assets/JS/fruitList.js";
       import foreinFruit from "./assets/JS/foreinFruit.js";
       import hotDealFruits from "./assets/JS/hotDealFruit.js";
+      localStorage.setItem("fruitList", JSON.stringify(fruitList));
+      localStorage.setItem("foreinFruit", JSON.stringify(foreinFruit));
+      localStorage.setItem("hotDealFruits", JSON.stringify(hotDealFruits));
 
       // Render FruitList
       let newFruitList = fruitList.slice(0, 8);

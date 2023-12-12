@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boxUser.innerHTML = "";
     boxUser.innerHTML = `<i class="fa-solid fa-circle-user"></i>
                       <div class="header__item-body d-flex flex-column">
-                        <a href="#!">Chào, ${UserInfo[loggedInAccountIndex].firstNameUser}</a>
+                        <a href="./infoUser.html">Chào, ${UserInfo[loggedInAccountIndex].firstNameUser}</a>
                         <a href="/" class="btn-logOut">Đăng xuất</a>
                       </div>`;
     logOut();
