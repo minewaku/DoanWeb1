@@ -188,26 +188,31 @@ btnSubmit.addEventListener("click", (event) => {
   goToDetail();
 });
 
-nameValue.addEventListener("keydown", (event) => {
-  if (event.keyCode === 13) {
-    let heading = document.querySelector(".name-heading");
-    let affterSearch = [];
-    if (nameValue.value.trim() == "") {
-      event.stopPropagation();
-    } else {
-      let keyword = nameValue.value;
-      allProducts.map((product) => {
-        if (containsKeyword(product.name, keyword)) {
-          affterSearch.push(product);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    nameValue.addEventListener("keydown", (event) => {
+      if (event.keyCode === 13) {
+        let heading = document.querySelector(".name-heading");
+        let affterSearch = [];
+        if (nameValue.value.trim() == "") {
+          event.stopPropagation();
+        } else {
+          let keyword = nameValue.value;
+          allProducts.map((product) => {
+            if (containsKeyword(product.name, keyword)) {
+              affterSearch.push(product);
+            }
+          });
         }
-      });
-    }
-    heading.innerHTML = "";
-    heading.innerHTML = `Có ${affterSearch.length} sản phẩm tìm thấy`;
-    pagiNation(affterSearch);
-    renderPageNumber(affterSearch);
-    goToDetail();
-  }
+        heading.innerHTML = "";
+        heading.innerHTML = `Có ${affterSearch.length} sản phẩm tìm thấy`;
+        pagiNation(affterSearch);
+        renderPageNumber(affterSearch);
+        goToDetail();
+      }
+    });
+  });
 });
 
 let productsInCart = localStorage.getItem("products")

@@ -123,7 +123,7 @@
                 <form method="get" class="header__searchbar w-100 d-flex">
                   <input
                     type="text"
-                    class="ps-2 w-100"
+                    class="ps-2 w-100 search-name-product"
                     placeholder="Tìm kiếm sản phẩm"
                   />
                   <span
@@ -1914,6 +1914,26 @@
       }
 
       rendercartContent();
+
+      // Search name product
+      let btnSubmitMain = document.querySelectorAll(
+        ".header__searchbar-icon.d-flex.justify-content-center.align-items-center"
+      );
+      btnSubmitMain[0].addEventListener("click", function () {
+        window.location.href = "./views/web/searchNameProduct.html";
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("form").addEventListener("submit", (e) => {
+          e.preventDefault();
+          let nameValue = document.querySelector(".search-name-product");
+          nameValue.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13 && nameValue.value != "") {
+              window.location.href = "./views/web/searchNameProduct.html";
+            }
+          });
+        });
+      });
 
       var menubar_icon = document.getElementById("menubar-icon");
       menubar_icon.addEventListener("click", openMenubar);
