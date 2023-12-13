@@ -6,7 +6,6 @@ let Orders = JSON.parse(localStorage.getItem("Orders"));
 
 let Users = JSON.parse(localStorage.getItem("UsersInfo")) || [];
 let indexLoged = JSON.parse(localStorage.getItem("loggedInAccountIndex"));
-console.log(Orders[indexLoged].orderUser);
 if (!Orders) {
   let orders = Users.map((user) => {
     return {
@@ -33,6 +32,7 @@ export function createOrderForNewUser() {
 }
 
 function createOrder() {
+  let modalPayment = document.querySelector(".modal-payment");
   let btnSubmit = document.querySelector(".submitOrder");
   btnSubmit.addEventListener("click", (event) => {
     event.preventDefault();
@@ -92,6 +92,7 @@ function createOrder() {
     };
     Orders[indexLoged].orderUser.push(order);
     localStorage.setItem("Orders", JSON.stringify(Orders));
+    modalPayment.style.display = "none";
   });
 }
 

@@ -3,6 +3,37 @@ const putOut = document.querySelector(".form-login .login .btn");
 let booleanEmailLogin = false;
 let booleanPasswordLogin = false;
 let acceptLogin = true;
+let Orders = JSON.parse(localStorage.getItem("Orders"));
+
+let Users = JSON.parse(localStorage.getItem("UsersInfo")) || [];
+let indexLoged = JSON.parse(localStorage.getItem("loggedInAccountIndex"));
+if (!Orders) {
+  let orders = Users.map((user) => {
+    return {
+      nameUser: user.firstNameUser,
+      idUser: user.phoneUser,
+      orderUser: [],
+    };
+  });
+  localStorage.setItem("Orders", JSON.stringify(orders));
+}
+
+function createOrderForNewUser() {
+  let Orders = JSON.parse(localStorage.getItem("Orders")) || [];
+  let indexLoged = JSON.parse(localStorage.getItem("loggedInAccountIndex"));
+  let Users = JSON.parse(localStorage.getItem("UsersInfo")) || [];
+
+  if (indexLoged >= Orders.length) {
+    let order = {
+      nameUser: Users[indexLoged].firstNameUser,
+      idUser: Users[indexLoged].phoneUser,
+      orderUser: [],
+    };
+    Orders.push(order);
+  }
+
+  localStorage.setItem("Orders", JSON.stringify(Orders));
+}
 
 putOut.addEventListener("click", (e) => {
   e.preventDefault();
@@ -10,8 +41,8 @@ putOut.addEventListener("click", (e) => {
   const passwordLogin = document.querySelector("#password");
   checkLo(emailLogin, passwordLogin);
   if (booleanEmailLogin && booleanPasswordLogin && acceptLogin) {
-    // document.location.href = "http://127.0.0.1:5500";
-    alert("chuyen");
+    document.location.href = "http://127.0.0.1:5500";
+    createOrderForNewUser();
     localStorage.setItem("isLogin", "true");
   } else if (acceptLogin == false) {
     alert("Tài khoản của bạn không thể đăng nhập");
@@ -58,7 +89,6 @@ function checkLo(emailLogin, passwordLogin) {
       acceptLogin == true
     ) {
       localStorage.setItem("loggedInAccountIndex", i);
-      alert("Login");
       break;
     }
   }
