@@ -222,6 +222,136 @@ function containsKeyword(productName, keyword) {
   return normalizedProductName.includes(normalizedKeyword);
 }
 
+function editProduct() {
+  let btnEditProduct = document.querySelectorAll(".btn.btn-secondary");
+  btnEditProduct.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      let modal = document.querySelector(".modal-edit-product");
+      modal.style.display = "block";
+      modal.addEventListener("click", (e) => {
+        // e.preventDefault();
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+      let submitBtn = document.querySelector(
+        ".modal-edit-product .btn.btn-secondary"
+      );
+      submitBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        let nameSearch = document.querySelector(
+          ".modal-edit-product #product-name"
+        ).value;
+
+        if (nameSearch == "") {
+          alert("Chua co ten san pham");
+        } else {
+          const normalizedKeyword = removeVietnameseDiacritics(nameSearch);
+
+          let tmpList = [];
+          console.log(allList[index]);
+          allList[index].forEach((product) => {
+            let normalizedProductName = removeVietnameseDiacritics(
+              product.name
+            );
+
+            if (normalizedProductName.includes(normalizedKeyword)) {
+              tmpList.push(product);
+            }
+          });
+
+          if (tmpList.length > 0) {
+            document.querySelector(
+              ".modal-edit-product .result-search"
+            ).innerHTML = `<table
+            class="table table-striped table-valign-middle foreign-list"
+          >
+          <thead>
+            <tr>
+              <th>Product</th>
+            </tr>
+          </thead>
+          <tbody>
+          ${(() => {
+            let htmls = tmpList.map((product) => {
+              return `
+              <tr data-position=${product.id}>
+              <td>
+                <img src="${product.srcImg}" alt="Thanh long ruột đỏ" class="img-circle img-size-32 mr-2">
+                ${product.name}
+              </td>
+              </tr>`;
+            });
+            return htmls.join(" ");
+          })()}
+          </tbody>
+          </table>`;
+          } else {
+            document.querySelector(
+              ".modal-edit-product .result-search"
+            ).innerHTML = "";
+            document.querySelector(
+              ".modal-edit-product .result-search"
+            ).innerHTML = "Không có sản phẩm với tên này";
+          }
+          document
+            .querySelectorAll(".result-search tbody tr")
+            .forEach((item) => {
+              item.addEventListener("click", () => {
+                let position = parseInt(item.getAttribute("data-position"));
+                document.querySelector(".modal-child-edit").style.display =
+                  "block";
+
+                document
+                  .querySelector(".modal-child-edit .btn.btn-secondary")
+                  .addEventListener("click", function () {
+                    let indexInArray = 1;
+                    allList[index].forEach((product, indexFor) => {
+                      if (product.id == position) {
+                        indexInArray = indexFor;
+                      }
+                    });
+                    let inputName = document.querySelector(
+                      ".modal-child-edit #product-name"
+                    ).value;
+                    let inputPrice = document.querySelector(
+                      ".modal-child-edit #product-price"
+                    ).value;
+                    let inputDesc = document.querySelector(
+                      ".modal-child-edit #product-desc"
+                    ).value;
+                    allList[index][indexInArray].name = inputName;
+                    allList[index][indexInArray].price = inputPrice;
+                    allList[index][indexInArray].desc.dacDiem = [inputDesc];
+                    if (index == 0) {
+                      localStorage.setItem(
+                        "fruitList",
+                        JSON.stringify(allList[index])
+                      );
+                    } else if (index == 1) {
+                      localStorage.setItem(
+                        "foreinFruit",
+                        JSON.stringify(allList[index])
+                      );
+                    } else {
+                      localStorage.setItem(
+                        "hotDealFruits",
+                        JSON.stringify(allList[index])
+                      );
+                    }
+                    alert("Chỉnh sửa sản phẩm thành công");
+                    document.querySelector(".modal-child-edit").style.display =
+                      "none";
+                    modal.style.display = "none";
+                  });
+              });
+            });
+        }
+      });
+    });
+  });
+}
+
 function deleteProduct() {
   let btnDltProduct = document.querySelectorAll(".btn.btn-danger");
   btnDltProduct.forEach(function (btn, index) {
@@ -361,7 +491,6 @@ function addProduct() {
   let btnAddProduct = document.querySelectorAll(".btn.btn-success");
   btnAddProduct.forEach(function (btn, index) {
     btn.addEventListener("click", () => {
-      console.log(1);
       let modal = document.querySelector(".modal-add-product");
       modal.style.display = "block";
       // name
@@ -439,4 +568,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderHotDeal();
   addProduct();
   deleteProduct();
+  editProduct();
 });

@@ -593,7 +593,7 @@
           "
         >
           <div
-            class="card card-success col-md-9"
+            class="card card-danger col-md-9"
             style="margin: auto; padding: 0"
           >
             <div class="card-header">
@@ -612,11 +612,124 @@
                     placeholder="Nhập tên sản phẩm"
                   />
                 </div>
-                <div class="result-search">Khoong cos</div>
+                <div class="result-search">Sản phẩm sẽ hiện ở đây</div>
 
                 <div class="card-success card-footer">
                   <button class="btn btn-primary">Submit</button>
                 </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Modal edit product -->
+        <div
+          class="modal-edit-product"
+          style="
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 80px 0 0 0;
+            display: none;
+          "
+        >
+          <div
+            class="card card-secondary col-md-9"
+            style="margin: auto; padding: 0"
+          >
+            <div class="card-header">
+              <h3 class="card-title">Tìm sản phẩm cần chỉnh sửa</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="product-name">Tên sản phẩm</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-name"
+                    placeholder="Nhập tên sản phẩm"
+                  />
+                </div>
+                <div class="result-search">Sản phẩm sẽ hiện ở đây</div>
+
+                <div class="card-success card-footer">
+                  <button class="btn btn-secondary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="modal-child-edit"
+          style="
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 80px 0 0 0;
+            display: none;
+          "
+        >
+          <div
+            class="card card-secondary col-md-9"
+            style="margin: auto; padding: 0"
+          >
+            <div class="card-header">
+              <h3 class="card-title">Chỉnh sửa sản phẩm</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="product-name">Tên sản phẩm</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-name"
+                    placeholder="Nhập tên sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-price">Giá mỗi sản phẩm(Kg/Quả)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-price"
+                    placeholder="Nhập giá sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-quantity">Số lượng</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="product-quantity"
+                    placeholder="Nhập số lượng vào kho"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-desc">Nhập mô tả cho sản phẩm</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    id="product-desc"
+                    placeholder="Enter description..."
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-success card-footer">
+                <button class="btn btn-secondary">Submit</button>
               </div>
             </form>
           </div>
